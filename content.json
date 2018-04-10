@@ -1,0 +1,68 @@
+{
+  "name": "面向对象编程",
+  "desc": "这个教程主要配合Java介绍面向对象编程的理论知识概念，不管以后要学习哪一个面向对象语言，学习这个教程都是很有用的。",
+  "keywords": ["编程", "基础"],
+  "cover": "cover.png",
+  "tags": ["编程", "基础", "入门"],
+  "chapters": [
+    {
+      "name": "类和对象",
+      "content": "Chapter1/Chapter1.md",
+      "sections": [
+        {"name":"什么是类"},
+        {"name":"对象"},
+        {"name":"对象类型"},
+        {"name":"小练习"}
+      ]
+    },
+    {
+      "name": "类的世界",
+      "content": "Chapter2/Chapter2.md",
+      "sections": [
+        {"name":"作用域"},
+        {"name":"三个关键字"},
+        {"name":"方法"},
+        {"name":"小练习"}
+      ]
+    },
+    {
+      "name": "引用",
+      "content": "Chapter3/Chapter3.md",
+      "sections": [
+        {"name":"原始类型和引用类型"},
+        {"name":"空引用"},
+        {"name":"方法参数"},
+        {"name":"小练习"}
+      ]
+    },
+    {
+      "name": "继承",
+      "content": "Chapter4/Chapter4.md",
+      "sections": [
+        {"name":"父类和子类的关系"},
+        {"name":"实现继承"},
+        {"name":"抽象类"},
+        {"name":"小练习"}
+      ]
+    },
+    {
+      "name": "多态",
+      "content": "Chapter5/Chapter5.md",
+      "sections": [
+        {"name":"类型转换"},
+        {"name":"动态绑定"},
+        {"name":"使用“super”调用父类"},
+        {"name":"小练习"}
+      ]
+    },
+    {
+      "name": "接口",
+      "content": "Chapter6/Chapter7.md",
+      "sections": [
+        {"name":"接口是什么"},
+        {"name":"定义和实现接口"},
+        {"name":"小练习"}
+      ]
+    }
+  ]
+}
