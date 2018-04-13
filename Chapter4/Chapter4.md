@@ -309,4 +309,25 @@ class Boy extends Human{
 
 抽象类
 -----
+抽象类
+我们可以用"abstract"这个关键字对一个类进行修饰，把这个类定义成抽象的类。同样，我们也可以用"abstract"这个关键字对一个方法进行修饰，把这个方法定义成抽象方法。如：
+```java
+public abstract class Anmimal{
+    public abstract void eat();
+    public abstract void roam();
+}
+```
+我们注意到，抽象方法是没有方法体的(没有方法的具体实现，其只能被定义在抽象类中，不能被定义在普通的类中。抽象方法的具体实现，是在抽象类的子类中完成的。
+An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
 
+An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:
+
+abstract void moveTo(double deltaX, double deltaY);
+If a class includes abstract methods, then the class itself must be declared abstract, as in:
+
+public abstract class GraphicObject {
+   // declare fields
+   // declare nonabstract methods
+   abstract void draw();
+}
+When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.
