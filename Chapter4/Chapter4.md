@@ -312,7 +312,7 @@ class Boy extends Human{
 抽象类
 我们可以用"abstract"这个关键字对一个类进行修饰，把这个类定义成抽象的类。同样，我们也可以用"abstract"这个关键字对一个方法进行修饰，把这个方法定义成抽象方法。如：
 ```java
-public abstract class Anmimal{
+public abstract class Animal{
     public abstract void eat();
     public abstract void roam();
 }
