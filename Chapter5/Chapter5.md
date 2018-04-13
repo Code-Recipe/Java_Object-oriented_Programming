@@ -17,24 +17,7 @@ public class Bicycle {
         cadence = startCadence;
         speed = startSpeed;
     }
-
-    // 这个自行车有四个方法
-    public void setCadence(int newValue) {
-        cadence = newValue;
-    }
-
-    public void setGear(int newValue) {
-        gear = newValue;
-    }
-
-    public void applyBrake(int decrement) {
-        speed -= decrement;
-    }
-
-    public void speedUp(int increment) {
-        speed += increment;
-    }
-
+    
     public void printDescription(){
         System.out.println("\nBike is " + "in gear " + this.gear
         + " with a cadence of " + this.cadence +
@@ -50,18 +33,6 @@ public class MountainBike extends Bicycle {
                int startSpeed,
                int startGear,
                String suspensionType){
-        super(startCadence,
-              startSpeed,
-              startGear);
-        this.setSuspension(suspensionType);
-    }
-
-    public String getSuspension(){
-      return this.suspension;
-    }
-
-    public void setSuspension(String suspensionType) {
-        this.suspension = suspensionType;
     }
 
     public void printDescription() {
@@ -73,25 +44,12 @@ public class MountainBike extends Bicycle {
 
 
 public class RoadBike extends Bicycle{
-    // In millimeters (mm)
     private int tireWidth;
 
     public RoadBike(int startCadence,
                     int startSpeed,
                     int startGear,
                     int newTireWidth){
-        super(startCadence,
-              startSpeed,
-              startGear);
-        this.setTireWidth(newTireWidth);
-    }
-
-    public int getTireWidth(){
-      return this.tireWidth;
-    }
-
-    public void setTireWidth(int newTireWidth){
-        this.tireWidth = newTireWidth;
     }
 
     public void printDescription(){
@@ -131,24 +89,7 @@ public class Bicycle {
         cadence = startCadence;
         speed = startSpeed;
     }
-
-    // 这个自行车有四个方法
-    public void setCadence(int newValue) {
-        cadence = newValue;
-    }
-
-    public void setGear(int newValue) {
-        gear = newValue;
-    }
-
-    public void applyBrake(int decrement) {
-        speed -= decrement;
-    }
-
-    public void speedUp(int increment) {
-        speed += increment;
-    }
-
+    
     public void printDescription(){
         System.out.println("\nBike is " + "in gear " + this.gear
         + " with a cadence of " + this.cadence +
@@ -170,18 +111,6 @@ public class MountainBike extends Bicycle {
                int startSpeed,
                int startGear,
                String suspensionType){
-        super(startCadence,
-              startSpeed,
-              startGear);
-        this.setSuspension(suspensionType);
-    }
-
-    public String getSuspension(){
-      return this.suspension;
-    }
-
-    public void setSuspension(String suspensionType) {
-        this.suspension = suspensionType;
     }
 
     public void printDescription() {
@@ -190,31 +119,19 @@ public class MountainBike extends Bicycle {
             getSuspension() + " suspension.");
     }
 } 
+
 ```
 请注意重写的`printDescription`方法。 除了之前提供的信息之外，输出中还包括有关悬挂缓冲系统的其他信息。
 
 接下来，创建`RoadBike`类。 由于公路赛车或赛车有较细窄的轮胎，因此我们添加一个属性`tireWidth`来描述轮胎宽度。
 ```java
 public class RoadBike extends Bicycle{
-    // In millimeters (mm)
     private int tireWidth;
 
     public RoadBike(int startCadence,
                     int startSpeed,
                     int startGear,
                     int newTireWidth){
-        super(startCadence,
-              startSpeed,
-              startGear);
-        this.setTireWidth(newTireWidth);
-    }
-
-    public int getTireWidth(){
-      return this.tireWidth;
-    }
-
-    public void setTireWidth(int newTireWidth){
-        this.tireWidth = newTireWidth;
     }
 
     public void printDescription(){
@@ -254,4 +171,7 @@ The MountainBike has a Dual suspension.
 Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20. 
 The RoadBike has 23 MM tires.
 ```
+可见，虽然我们有多个`printDescription`方法，但Java虚拟机（JVM）会为每个变量中引用的对象调用适当的方法。
+
+
 接下来，开始详细探索多态王国吧！💖
