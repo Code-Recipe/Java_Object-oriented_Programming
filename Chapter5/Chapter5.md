@@ -231,7 +231,7 @@ Animal puppy = new Dog();
 
 **1. 存在继承关系**
 
-      `MountainBike`类与`RoadBike`类继承了`Bicycle`类。
+    `MountainBike`类与`RoadBike`类继承了`Bicycle`类。
 
 **2. 子类要重写父类的方法**
 
@@ -239,12 +239,115 @@ Animal puppy = new Dog();
 
 **3. 对父类的引用指向子类对象**
 
-    测试类`TestBikes`中，语句
-    ```java
-    Bicycle bike01, bike02, bike03;
+测试类`TestBikes`中，语句
 
-    bike01 = new Bicycle(20, 10, 1);
-    bike02 = new MountainBike(20, 10, 5, "Dual");
-    bike03 = new RoadBike(40, 20, 8, 23);
-    ```
-    中，将对于父类`Bicycle`的引用，指向了`Bicycle`, `MountainBike`, `RoadBike`这三个子类对象。
+```java
+Bicycle bike01, bike02, bike03;
+
+bike01 = new Bicycle(20, 10, 1);
+bike02 = new MountainBike(20, 10, 5, "Dual");
+bike03 = new RoadBike(40, 20, 8, 23);
+```
+将对于父类`Bicycle`的引用，指向了`Bicycle`, `MountainBike`, `RoadBike`这三个子类对象。
+
+
+
+类型转换
+-----
+
+在AP CS A中，我们只需要掌握
+**向下转型（Downcasting）**
+的概念。
+
+
+考虑如下代码：
+```java
+//假设getID()方法是GradStudent类中特有的一个public实例方法，没有在Student类中被定义，GradStudent类继承自Student类。
+Student student = new GradStudent();
+GradStudent gradstudent = new GradStudent();
+int x = student.getID(); //编译时错误
+int y = gradstudent.getID(); //正确
+```
+
+我们可以看到，`student`与`gradstudent`两个实例对象，明明都指向着`GradStudent`这个类，为何
+```java
+student.getID()
+```
+会报错呢？
+
+这是因为，尽管实例对象`student`实际指向的是`GradStudent`这个类，但其引用类型仍然为`Student`类，而`Student`类是没有定义一个`getID()`方法的。在编译时，只有`Student`类的非`private`类型的方法，才能使用点号运算符`.`应用于`student`对象。注意，这和我们之前提到的`多态`无关，因为它不满足我们讲过的，`多态`所应该具备的条件：我们没有为子类`GradStudent`重写过getID()方法。因此，这里的`getID()`方法，我们没有赋予它多态性。是故，其只能被用于`GradStudent`类中的实例对象。
+
+那么，如果我们很需要为`student`对象使用`getID()`方法，怎么办呢？
+
+我们可以对`student`对象进行`转型(casting)`，将其强行转为正确的引用类型：
+```java
+ int x = ((GradStudent) student).getID();
+```
+
+因为`student`本已是一个指向`GradStudent`类的对象，只不过其引用对象仍为`Student`，我们的转型可以顺利完成。
+
+像这样的，把一个子类引用指向父类对象的转型过程，称作`向下转型`。
+
+在这个例子中，子类引用就是子类`GradStudent`中的引用方法`getID()`，我们将其强行指向父类对象`student`，使之能够被`student`对象合法地调用。
+
+动态绑定
+-----
+动态绑定（Dynamic bonding)，指的是，当存在方法重写时，关于调用哪一个实例方法的决定，是在Java程序运行时(run-time)（Java虚拟机JVM实时解析运行Java字节码时）才实时作出的。也就是说，这一个决定是在程序运行时，才实时、动态地作出的。
+
+与之相对的是，当存在方法重载时，关于调用哪一个实例方法的决定，是在Java程序编译时(compile-time)就已经做好的、固化了的，一成不变的的决定，这一种类型被称为静态绑定(Static bonding)。
+
+The compiler selects the correct
+overloaded method at compile time by comparing the methods’ signatures. This is
+known as static binding, or early binding. In polymorphism, the actual method that
+will be called is not determined by the compiler. Think of it this way: The compiler
+determines if a method can be called (i.e., is it legal?), while the run-time environment
+determines how it will be called (i.e., which overridden form should be used?).
+Example 1
+Student s = null;
+Student u = new UnderGrad("Tim Broder", new int[] {90,90,100},
+"none");
+Student g = new GradStudent("Kevin Cristella",
+new int[] {85,70,90}, "none", 1234);
+System.out.print("Enter student status: ");
+System.out.println("Grad (G), Undergrad (U), Neither (N)");
+String str = IO.readString(); //read user input
+if (str.equals("G"))
+s = g;
+else if (str.equals("U"))
+s = u;
+else
+s = new Student();
+s.computeGrade();
+Polymorphism 139
+When this code fragment is run, the computeGrade method used will depend on the
+type of the actual object s refers to, which in turn depends on the user input.
+Example 2
+public class StudentTest
+{
+public static void computeAllGrades(Student[] studentList)
+{
+for (Student s : studentList)
+if (s != null)
+s.computeGrade();
+}
+public static void main(String[] args)
+{
+Student[] stu = new Student[5];
+stu[0] = new Student("Brian Lorenzen",
+new int[] {90,94,99}, "none");
+stu[1] = new UnderGrad("Tim Broder",
+new int[] {90,90,100}, "none");
+stu[2] = new GradStudent("Kevin Cristella",
+new int[] {85,70,90}, "none", 1234);
+computeAllGrades(stu);
+}
+}
+Here an array of five Student references is created, all of them initially null. Three of
+Polymorphism
+applies only to
+overridden methods
+in subclasses.
+these references, stu[0], stu[1], and stu[2], are then assigned to actual objects. The
+computeAllGradesmethod steps through the array invoking for each of the objects the
+appropriate computeGrademethod, using dynamic binding in each case. The null test
+in computeAllGrades is necessary because some of the array references could be null.
