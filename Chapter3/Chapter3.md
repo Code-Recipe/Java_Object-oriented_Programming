@@ -6,7 +6,7 @@
 
 父类和子类的关系
 ------
-一个由其他的类派生出来的类，叫做子类(subclass)，而派生出子类的类，则叫做父类（superclass或parent class)。
+一个由其他的类派生出来的类，叫做子类(subclass)，而派生出子类的类，则叫做父类（superclass或parent class)。子类包含着父类的所有属性和方法，同时，子类还可以具有自己独有的属性和方法，因此，子类可以包含着比父类更多的属性和方法！
 
 在Java中，除了最终超类：Object类，所有的类都有且仅有一个直接的父类（这被称为单继承）。当没有明确在程序中声明某些类所属的父类时，这些类都是最终超类：Object类的（隐式）子类。
 
@@ -14,7 +14,11 @@
 
 继承的概念是简单而强大的。当你想创建一个新的类，而此时已经有既成的一个类包含了你想要的一些信息（也就是描述方法或属性的代码），你就可以直接在已经存在的类的基础上，派生出一个新的类，让那个派生出来的新类，来继承旧类的属性和方法。在这样的过程中，我们可以避免重复编写与调试已经写过的类中的代码，也就是程序员常说的"避免重复造轮子"。
 
+继承为代码重用提供了一个有效的机制。 假设父类的代码已经过测试和调试，那么，由于子类对象继承了父类，那么子类也就共享父类的代码，因此唯一需要的测试和调试的新代码就是用于子类的独特代码。
+
 说了这么多，那么，如何实现继承呢？
+
+
 实现继承
 ------
 为了具体地实现继承，有两个非常重要的Java关键字需要掌握：一个是"extends"，一个是"implements"。其中，"extends"是专门为类准备的，"implements"是专门为接口（后续会讲到）来准备的。
@@ -53,6 +57,11 @@ class Animal {
 }
 
 // 哺乳动物
+class Mammal{
+
+}
+
+//狗
 public class Dog extends Mammal{
   public void info(){
     System.out.println("I have " + eyes + "eyes.")
@@ -68,27 +77,37 @@ public class Dog extends Mammal{
 // 爬行动物
 class Reptile extends Animal{
 }
+```
+我们可以看见，哺乳动物类、爬行动物类、狗类，都继承自动物类。因此，动物类所定义的属性、行为，如眼睛、跑，在所有的子类都有所继承。因此，在狗类中，我们就不用再去重复定义眼睛、跑了，并且在狗类中，我们可以直接调用父类的行为、属性。而info()行为是Dog自己的行为，因此我们需要在Dog类中单独进行声明。我们可以看出：假如有两个类，A与B，而A派生出B，换句话说，B继承自A，则：
+```Java
+class A{
 
-// 狗
-class Dog extends Mammal{
+}
+
+class B extends A{
+
 }
 ```
+让我们再来看一个例子：
+
+
+我们定义一个类：自行车
 ```java
 public class Bicycle {
 
-    // the Bicycle class has three fields
+    // 这个自行车有三个属性
     public int cadence;
     public int gear;
     public int speed;
 
-    // the Bicycle class has one constructor
+    // 这个自行车类有一个构造方法
     public Bicycle(int startCadence, int startSpeed, int startGear) {
         gear = startGear;
         cadence = startCadence;
         speed = startSpeed;
     }
 
-    // the Bicycle class has four methods
+    // 这个自行车有四个方法
     public void setCadence(int newValue) {
         cadence = newValue;
     }
@@ -107,13 +126,17 @@ public class Bicycle {
 
 }
 ```
+
+然后我们再定义一个类：山地自行车。
+
+显然，山地自行车也属于自行车。
 ```Java
 public class MountainBike extends Bicycle {
 
-    // the MountainBike subclass adds one field
+    // 山地自行车有自己的一个特有属性
     public int seatHeight;
 
-    // the MountainBike subclass has one constructor
+    // 山地自行车子类有一个构造方法
     public MountainBike(int startHeight,
                         int startCadence,
                         int startSpeed,
@@ -122,63 +145,166 @@ public class MountainBike extends Bicycle {
         seatHeight = startHeight;
     }   
 
-    // the MountainBike subclass adds one method
+    // 山地自行车v子类有自己的一个特有方法
     public void setHeight(int newValue) {
         seatHeight = newValue;
     }   
 }
 ```
-下面是练习框，让我们跟着练习框的下方的指示一起来熟悉一下练习环境吧。
 
-<lab lang="blocks" parameters="logic=false&math=false&loops=false&lists=false&color=false&variables=false&functions=false&text=false&name=chapter1lab1">
-  <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+我们可以看到，山地自行车继承了自行车通用的所有属性(cadence, speed, gear)，而其自己特有的属性为seatHeight（座椅高度）。我们可以看见，在山地自行车类中，可以直接使用父类（自行车类）的所有属性。super关键字的用法，我们会在下一章节提到。同学们可以先猜一猜，super关键字起到了什么样的作用。
+
+instanceof关键字
+-----
+我们可以通过instanceof关键字判断父类与子类是否存在继承的关系。instanceof 是 Java 的保留关键字，它的作用是测试它左边的对象是否是它右边的类的实例，或左边的类是否由继承自右边的类。用来判断哺乳动物是否是动物，狗是否是动物等，如果是那么就是真，否则就是假，instanceof关键字返回 boolean 的数据类型。
+
+
+例如：
+```java
+  
+public class Vehicle {   
+
+}  
+
+public class Bicycle extends Vehicle{
+    public static void main(String[] args) {
+        system.out.println(Bicycle instanceof      Vehicle); // 输出结果为：ture  
+
+    }  
+}
+```
+
+
+
+
+方法重写
+-----
+方法重写(Method override)指的是，如果一个类继承了其父类的方法，那么我们可以通过方法重写，用同名的方法，来"覆盖"掉所继承的父类的对应方法。相当于，在子类中我们"重新写了"一次，父类中该名称的方法，并用此方法来替代所继承的同名方法。
+
+方法重写带来的好处是：我们能够定义特定于子类类型的行为，这意味着子类可以根据其各自的特殊要求，来实现父类方法，而无需修改父类代码。
+
+重写的方法具有与父类的方法相同的名称，参数的数量和类型，以及返回类型与其覆盖的方法相同。 
+
+请看如下两个类。第一个类是动物类，包含着一个实例方法，以及一个静态方法（类方法）。第二个类是第一个类（动物类）的子类：猫类。
+
+**请注意，以上指的是实例方法(Instance method)的方法重写。对于静态方法（类方法），不存在方法重写，而是方法隐藏(Method hiding)**
+
+如果一个子类在超类中定义了一个与静态方法具有相同名称的静态方法，那么子类中的方法隐藏超类中的方法。
+
+隐藏静态方法和重写实例方法之间的区别是：
+
+被真正调用的重写实例方法，是子类中"重写"出来的那一个。而真正被调用的隐藏静态方法，取决于它是从父类还是子类中被调用。
+
+
+```java
+public class Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Animal");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Animal");
+    }
+}
+
+
+public class Cat extends Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Cat");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Cat");
+    }
+
+    public static void main(String[] args) {
+        Cat myCat = new Cat();
+        Animal myAnimal = myCat;
+        Animal.testClassMethod();
+        myAnimal.testInstanceMethod();
+    }
+}
+```
+Cat类覆盖Animal类中的实例方法并隐藏Animal中的静态方法。 此类中的主要方法创建Cat的一个实例对象。
+
+然后，在Cat类的main()方法中调用了Cat类的静态方法:testClassMethod()，以及myAnimal这一个对象的实例方法:testInstanceMethod()。 
+
+
+注意，被调用的实例方法testInstanceMethod()是被子类重写出来的那一个，而被调用的静态方法，则取决于调用这个方法的类是父类还是子类；在这一个例子中，是Animal类的，而不是Cat类中的。
+
+这个程序编译运行结果是：
+```
+The static method in Animal
+The instance method in Cat
+````
+正如所说的的那样，被调用的隐藏静态方法的版本是调用它的类中中的那一个，被调用的重写实例方法，则是子类中的那一个。
+
+如果我们把
+```java
+        Animal.testClassMethod();
+```
+改成
+```java
+        Cat.testClassMethod();
+```
+会发生什么呢？
+
+来试试看！
+
+<lab lang="java" parameters="filename=Cat.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+public class Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Animal");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Animal");
+    }
+}
+
+
+public class Cat extends Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Cat");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Cat");
+    }
+
+    public static void main(String[] args) {
+        Cat myCat = new Cat();
+        Animal myAnimal = myCat;
+        Cat.testClassMethod();
+        myAnimal.testInstanceMethod();
+    }
+}
 </lab>
 
-首先，点击左边的“输入输出”，将“输出”块拖到右边。然后，修改一下文字“abc”成“Hello World!”，再点击右边的红色按钮运行。
-结果应该是这样：
-![运行截图](Pic2.png)
+```java
+class Human{
+   //被重写的方法
+   public void eat()
+   {
+      System.out.println("Human is eating");
+   }
+}
+class Boy extends Human{
+   //重写的同名新方法
+   public void eat(){
+      System.out.println("Boy is eating");
+   }
+   public static void main( String args[]) {
+      Boy obj = new Boy();
+      //这会调用子类中重写的eat()方法
+      obj.eat();
+   }
+}
+```
+现在，大家对上面这段代码的运行结果是
+```Boy is eating```而非```Human is eating```的原因，已经能够完全理解了吧！
 
-那输入呢？ 让我们把“输入文字并提示消息”块插到“输出”块上，这里的提示消息指的是在输入文字的时候会告诉我们程序的使用者输入的文字的含义，同样点击运行，首先输入一些文字，然后点确认，这串文字就会被输出了。当然，我们也可以通过下拉框选择让这个输入块读取数字，试一试吧。
+**注意：**
 
-如果想删除一个块，把它拖到右下角的垃圾桶图标上就好了。
+* **私有的(private)、静态的(static)、最终的(final)方法是不可以被重写的，因为他们的作用于是局部的(local)而非全局的。然而，静态方法可以在子类中重新声明(re-declare)，在这种情况下，子类方法的行为将会不同，并且与父类的相同静态方法无关，父类的静态方法相当于在子类中，被隐藏了。**
 
-![运行截图](Pic3.png)
+* **重写方法的参数列表（子类的方法）必须与重写方法（父类的方法）相匹配。参数的数据类型及其顺序应完全匹配。**
 
-细心的你可能会发现，在选择输入数字以后，如果输入的不是一个数字，就会输出NaN，这是为什么呢？其实NaN的意思是Not a Number，代表程序告诉我们输入的并不是一个数字。
 
-这样，我们就做出了一个小程序，它能读取用户的输入，然后对数字进行处理，然后输出回来，是不是很有意思呀~
-
-计算
-------
-刚才我们学完了最基本的输入输出，那接下来我们可以更进一步，学一下如何让计算机来为我们进行运算。
-
-<lab lang="blocks" parameters="logic=false&loops=false&lists=false&color=false&variables=false&functions=false&text=false&name=chapter1lab2">
-  <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
-</lab>
-
-你可能会发现，这个练习环境和之前不一样，因为这里多了一个“数学”按钮，点进去以后会发现里面全都是数学运算，看起来好复杂的样子。让我们从简单的开始，先拖动一个“1+1”块（其实这是四则运算加乘方块，我们等一会儿就知道啦），插在“输出”块上，点击运行，大功告成啦！
-![运行截图](Pic4.png)
-
-这个“1+1”块可没有看起来那么简单，这个块是可是可以高度定制的呢！我们可以1+1成为任意的四则运算内容，比如10÷5。而且这个“1+1”块内部还可以嵌入其他块，这样就可以做好多次加减乘除啦。
-
-我们还可以把输入块放入这个运算块里，不过记得选择“输入数字并显示消息”而不是“输入文字并显示消息”，不然是放不进运算块的，毕竟文字可不能进行四则运算。
-
-像底下这样组合块就可以做出一个除法计算器啦！
-![运行截图](Pic5.png)
-
-小练习
-------
-让我们来练习一下我们刚学习的知识吧。
-<lab lang="blocks" parameters="logic=false&loops=false&lists=false&color=false&variables=false&functions=false&text=false&name=chapter1lab3">
-  <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
-</lab>
-
-试试做出如下的效果：
-
-1. 输出“我要认真学习编程” （不带引号）
-2. 计算1000-985并输出
-3. 计算(100-58)\*2并输出
-4. 把输入的数值加上10输出
-5. 把输入的数值平方（也就是四则运算加乘方块里面的^2）输出
-
-学到这里，你就已经算是入门计算机编程啦👏，加油加油继续学习吧~
