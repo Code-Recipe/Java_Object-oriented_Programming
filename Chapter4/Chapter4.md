@@ -317,7 +317,34 @@ public abstract class Animal{
     public abstract void roam();
 }
 ```
-我们注意到，抽象方法是没有方法体的(没有方法的具体实现，其只能被定义在抽象类中，不能被定义在普通的类中。抽象方法的具体实现，是在抽象类的子类中完成的。
+我们注意到，抽象方法是没有方法体的(没有方法的具体实现，其只能被定义在抽象类中，不能被定义在普通的类中。抽象方法的具体实现，是在继承抽象类的子类中完成的。
+
+来看这样一段代码：
+```java
+public abstract class Animal{
+    String name;
+    String food;
+
+    public abstract void eat();
+    public abstract void roam();
+}
+
+public abstract class Canine extends Animal{
+    public void eat(){
+        System.out.println("Canine animal is eating!")
+    }
+}
+
+public class Dog extends Canine{
+    public void roam(){
+        System.out.println("Dog is running!")
+    }
+    public static void main(String[] args){
+        Dog dog = new Dog();
+        dog.eat();
+        dog.roam();
+    }
+}
 An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
 
 An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:
