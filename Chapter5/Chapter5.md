@@ -202,4 +202,32 @@ The RoadBike has 23 MM tires.
 
 对象bike01, bike02, bike03所引用的类型都是Bicycle类，但他们实际所指的对象类型，则分别是Bicycle, MountainBike, RoadBike。
 ```
-注意，多态是
+还记得吗？多态指的是一种，为，处在类继承层次结构（也就是一层一层的，从高到低的这种继承关系，一级一级的结构）中的具体对象（一个特定对象，处在类继承层次结构中特定的某一级别、某一层次）选择适当的方法的机制。比如我们在前面的例子中，我们的三个bike对象，分别处在三个不同的层次（一个在父类，两个在子类），然后，我们分别让这三个bike对象，调用了同一个方法名的方法`printDescription`。但是，同一个方法名的方法`printDescription`，实际上有三种不同的形态：`普通自行车(Bicycle)`形态，`山地自行车(MountainBike)`形态，以及`公路自行车(RoadBike)`形态。也就是说，这个`printDescription`方法，是具有多种形态的！`printDescription`这一个被两次重写过的方法，就被称为是多态的方法。
+
+再拿`代欧奇希斯`这只神奇宝贝来作比喻：这是一种长得像外星人的两足神奇宝贝，拥有四种形态，各自注重不同的能力。但，这四种形都态具有共同特征，其躯体都为橘红色，面部都为蓝绿色，背部都有三个蓝绿色的点。
+![代欧奇希斯](1.png)
+
+
+方法的多态性也就像这样，同一个行为具有多个不同表现形式或形态的能力。就如同蝴蝶拥有许多不同的发展形态一样。
+
+让我们回到我们的自行车例子（不要跑偏到神奇宝贝了），来说明多态的存在，所需要的三个前提：
+
+**1. 存在继承关系**
+
+      `MountainBike`类与`RoadBike`类继承了`Bicycle`类。
+
+**2. 子类要重写父类的方法**
+
+    子类重写（Override)了父类的实例方法`printDescription`
+
+**3. 对父类的引用指向子类对象**
+
+    测试类`TestBikes`中，语句
+    ```java
+    Bicycle bike01, bike02, bike03;
+
+    bike01 = new Bicycle(20, 10, 1);
+    bike02 = new MountainBike(20, 10, 5, "Dual");
+    bike03 = new RoadBike(40, 20, 8, 23);
+    ```
+    中，将对于父类`Bicycle`的引用，指向了`Bicycle`, `MountainBike`, `RoadBike`这三个子类对象。
