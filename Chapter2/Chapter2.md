@@ -174,7 +174,7 @@ public class Dog{
         /* 通过方法来设定name */
         myDog.setName("myPuppy");
         /* 调用另一个方法获取name */
-        myDog.getName( );
+        myDog.getName();
         /*你也可以像下面这样访问成员变量 */
         System.out.println("name值 : " + myDog.getName() );
     }
@@ -252,6 +252,23 @@ public class cat {
     }
 }
 </lab>
+
+Javadoc注释
+-----
+注释我们已经在Java入门教程里面说过了，其目的主要是为了让读代码的人知道代码的用途。在Java里有一种特殊的注释——Javadoc注释，是用来描述一个方法的信息，一般放在方法定义前。
+```java
+/** Puts obj at location loc in this grid, and returns
+* the object previously at this location.
+* Returns null if loc was previously unoccupied.
+* Precondition: obj is not null, and loc is valid in this grid.
+* @param loc the location where the object will be placed
+* @param obj the object to be placed
+* @return the object previously at the specified location
+* @throws NullPointerException if the object is null */
+public E put(Location loc, E obj) { // 这是方法定义
+...
+```
+首先最前面的部分是这个方法功能和用法的文字描述，之后的`@param`代表这后面的是描述参数的，`loc`和`obj`是参数名，之后的是参数说明。`@return`是对返回值的说明，`@throws NullPointerException`代表可能抛出`NullPointerException`，后面是抛出的条件。
 
 小练习
 -----
