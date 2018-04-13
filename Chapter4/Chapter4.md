@@ -307,6 +307,28 @@ class Boy extends Human{
 
 * **重写方法的参数列表（子类的方法）必须与重写方法（父类的方法）相匹配。参数的数据类型及其顺序应完全匹配。**
 
+方法重写(Override)与方法重载(Overroad)的区别
+-----
+两个方法具有同一个方法名，但传入参数类型/数量不同，这叫方法重载(Overload).
+```java
+void example(String str);
+void example(int number);
+```
+
+两个方法父类与子类有同样的方法名和参数，这叫方法覆盖(Override).
+```java
+class Parent {
+    void test() {
+        System.out.println("This is the test method in parent class.");
+    }
+}
+class Child extends Parent {
+    void test() {
+        System.out.println("This is the test method in subclass.");
+    }
+}
+```
+
 抽象类
 -----
 抽象类
