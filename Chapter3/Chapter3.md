@@ -94,28 +94,27 @@ public class Dog {
 
 这时候Java会提示`variable myPuppy might not have been initialized`，这是因为Java注意到我们没有**初始化**（initialize）这个变量，也就是没给它赋值就调用，不让我们编译通过，因为这显然是会造成问题的。
 
-上面说的是我们在一个方法里定义`myPuppy`的情况，但如果在一个类里定义`myPuppy`，情况则完全不同。
-
-事实上，如果我们定义了却没有初始化一个变量，Java会给这个变量`null`值。但因为Java直接阻止了我们的编译，因此没法查看这个值。不过为了举例，我们可以手动初始化一下这个变量为`null`，让Java觉得我们已经初始化过了，因此让我们编译通过：
+上面说的是我们在一个方法里定义`myPuppy`的情况，但如果在一个类里定义`myPuppy`，情况则完全不同，例如每一个`Dog`对象都会有一个`son`属性，这个`son`直接定义在类的内部，如下所示：
 
 <lab lang="java" parameters="filename=Dog.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
 public class Dog {
   int age;
+  Dog son;
 
   public void showInfo(){
     System.out.println("I'm " + age + " years old.");
   }
 
   public static void main(String[] args) {
-    Dog myPuppy = null;
-
-    myPuppy.showInfo();
+    Dog myPuppy = new Dog();
+    System.out.println(myPuppy.son);
+    myPuppy.son.showInfo();
   }
 }
 </lab>
 
-然后程序直接就运行出错了，抛出了一个异常`Exception in thread "main" java.lang.NullPointerException`（还记得我们在Java入门教程里说过的异常是在运行的时候而不是在编译的时候抛出的吗）。这个异常说的是我们在试图访问一个值为`null`的变量的方法或者属性。在程序运行的时候，如果遇到了这个错误，那么可能是前面的哪一步出错了，导致程序所读取的对象的值是`null`。
+运行代码以后会发现，我们的程序先输出了`null`，又抛出了一个异常`Exception in thread "main" java.lang.NullPointerException`（还记得我们在Java入门教程里说过的异常是在运行的时候而不是在编译的时候抛出的吗）。**这是因为如果我们在类的实例里面（而不是方法里面）定义了却没有初始化一个变量，Java会给这个变量`null`值**，这个带有`null`值的引用叫做空引用，这个异常说的是我们在试图访问一个值为`null`的变量的方法或者属性。在程序运行的时候，如果遇到了这个错误，那么可能是前面的哪一步出错了，导致程序所读取的对象的值是`null`。
 
 运行的时候抛出`java.lang.NullPointerException`固然很吓人，除了用`catch`来接住这个异常以外，我们还可以在异常发生前通过判断是不是`null`来避免使用到值为`null`的变量：
 
