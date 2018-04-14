@@ -50,10 +50,13 @@ P.S: 教程读者请不要直接阅读本项目的文件，因为诸多功能在
   * 小练习
 7. 最终超类——Object类
   * Object类是什么
-  * Object类里的方法
+  * Object类里的方法概述
+  * toString()方法
+  * equals()方法
   * 小练习
 8. 一个特殊而又重要的类——String类
-  * String对象的创建和修改
+  * String对象的创建和更新
+  * String类对象的连接
   * String类的方法
   * String类的比较
   * 小练习
