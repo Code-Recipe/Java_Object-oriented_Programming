@@ -66,7 +66,7 @@ myPuppy.showInfo();
 ```
 三行语句来调用myPuppy的三种行为。
 
-可这样写的话，每一次都需要定义myPuppy的行为。让我们来改写上面那段代码，看看“构造方法(constructor)”究竟是什么。
+可这样写的话，每一次都需要定义myPuppy的行为。让我们来改写上面那段代码，看看“构造方法(constructor)”究竟是什么。
 ```Java
 public class Dog {
     public Dog(String name, String sex, int age){
