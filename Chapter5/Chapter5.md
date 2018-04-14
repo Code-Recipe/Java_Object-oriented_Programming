@@ -296,32 +296,19 @@ student.getID()
 
 与之相对的是，当存在方法重载时，关于调用哪一个实例方法的决定，是在Java程序编译时(compile-time)就已经做好的、固化了的，一成不变的的决定，这一种类型被称为静态绑定(Static bonding)。
 
-The compiler selects the correct
-overloaded method at compile time by comparing the methods’ signatures. This is
-known as static binding, or early binding. In polymorphism, the actual method that
-will be called is not determined by the compiler. Think of it this way: The compiler
-determines if a method can be called (i.e., is it legal?), while the run-time environment
-determines how it will be called (i.e., which overridden form should be used?).
-Example 1
-Student s = null;
-Student u = new UnderGrad("Tim Broder", new int[] {90,90,100},
-"none");
-Student g = new GradStudent("Kevin Cristella",
-new int[] {85,70,90}, "none", 1234);
-System.out.print("Enter student status: ");
-System.out.println("Grad (G), Undergrad (U), Neither (N)");
-String str = IO.readString(); //read user input
-if (str.equals("G"))
-s = g;
-else if (str.equals("U"))
-s = u;
-else
-s = new Student();
-s.computeGrade();
-Polymorphism 139
-When this code fragment is run, the computeGrade method used will depend on the
-type of the actual object s refers to, which in turn depends on the user input.
-Example 2
+在静态绑定中，编译器会通过分析比较实例方法的签名特点、逻辑层次归属等等，来选择正确的方法重载，并且一旦选择完毕，就在编译时将这样的绑定关系定死了，不可能再改变了。
+
+而在多态的实现中，当遭遇到方法重写，最终哪一个实例方法会被调用这个决定，不是由编译器在编译时决定的。 
+
+在动态绑定的过程中，编译器所做的事情是，判断一个方法能否被合法地调用。而，运行时环境（Java虚拟机JVM）才是最终作出关于究竟要调用被重写的方法中的哪一个实例方法的决定的那个角色。
+来看下面这个例子：
+
+![DB](2.png)
+
+当这一段代码在运行的时候，`speak()`方法的具体选择，会根据调用该方法的具体对象类型而定。
+
+再来看巴朗教材中的一段例子：
+```java
 public class StudentTest
 {
 public static void computeAllGrades(Student[] studentList)
@@ -342,12 +329,109 @@ new int[] {85,70,90}, "none", 1234);
 computeAllGrades(stu);
 }
 }
-Here an array of five Student references is created, all of them initially null. Three of
-Polymorphism
-applies only to
-overridden methods
-in subclasses.
-these references, stu[0], stu[1], and stu[2], are then assigned to actual objects. The
-computeAllGradesmethod steps through the array invoking for each of the objects the
-appropriate computeGrademethod, using dynamic binding in each case. The null test
-in computeAllGrades is necessary because some of the array references could be null.
+```
+这里我们创建了一个包含长度为`5`的`Student`数组，它们最初都是都是空的。 其中的三个数组对象`stu[0]`, `stu[1]`, `stu[2]`，接着被指向三个具体的实例对象。
+
+`computeAllGrades`方法遍历数组，为每个对象调用相应的`computeGrade`方法，在每种情况下都使用动态绑定。 对`computeAllGrades`方法进行空测试是必需的，因为某些数组引用可能为空。
+
+使用“super”调用父类
+-----
+使用`super`关键字，我们能够使得一个子类，调用处在其父类中的一个方法。大家可能会感到疑惑，我们前面不是讲到，一个子类继承了父类以后，这个子类就继承分享了，其父类的属性和方法了吗？比如，
+```java
+public class Mammal{
+    public void eat(){
+        System.out.println("I can eat!");
+    }
+}
+
+public class Dog extends Mammal{
+    public static void main(String[] args){
+        Dog puppy = new Dog();
+        puppy.eat();
+    }
+}
+```
+在上述代码中，我们不用`super`关键字，就可以使用父类中的`eat()`方法。那么，`super`关键字在什么时候会派上用场呢？
+
+答案是：当出现方法重写时。
+
+**如果在子类中，我们对一个方法进行了重写，则重写过的方法默认覆盖过了父类中的同名方法，但若我们就是想使用父类中的，被重写过的，那一个原本的方法，那我们就可以通过使用关键字`super`来调用被重写过(Overridden)的方法。**
+
+比方说：
+```java
+public class Superclass {
+
+    public void printMethod() {
+        System.out.println("Printed in Superclass.");
+    }
+}
+
+public class Subclass extends Superclass {
+
+    // overrides printMethod in Superclass
+    public void printMethod() {
+        super.printMethod();
+        System.out.println("Printed in Subclass.");
+    }
+    public static void main(String[] args) {
+        Subclass s = new Subclass();
+        s.printMethod();    
+    }
+}
+```
+在这个例子中，我们的`printMethod`在子类`Subclass`中被重写过了一次。如果我们像前面`Dog`类那个例子一样，仅仅使用点号运算符`.`在子类中去调用这个，则根据我们在`方法重写`那一章节讲的规则，Java程序默认会选择使用重写过的方法，也就是子类中的那一个`printMethod`方法，而非父类中原本的`printMethod`方法。因此，若我们想要在子类中使用父类中的`printMethod`方法，而非子类中的`printMethod`方法，我们必须使用`super`进行强行声明。
+
+上述程序的运行结果为:
+```
+Printed in Superclass.
+Printed in Subclass.
+```
+
+原因是，Java程序首先从子类`Subclass`中的`main()`方法开始执行，实例对象`s`将会优先调用子类中的`printMethod()`方法，在这个方法中有两行语句。第一行语句
+```java
+super.printMethod();
+```
+中的`super`关键字，将会强行声明，我们这里要使用的是父类中的`printMethod`方法，于是Java运行环境（Java虚拟机JVM）将会去试图寻找并执行类继承层次结构上，这个子类上一级别的父类中的`printMethod`方法，于是，这一行语句调用了父类`Superclass`中的`printMethod`方法，打印出第一行结果：
+```
+Printed in Superclass.
+```
+注意，这里其实是在执行子类中的`printMethod()`方法，只不过在执行的过程中，`super`关键字使得程序流程"灵魂出窍"一样，暂时去了更高一个类，执行完这一行语句后，Java虚拟机JVM紧接着执行的仍然是子类中的`printMethod()`方法  的下一行语句
+```java
+System.out.println("Printed in Subclass.");
+```
+打印出第二行结果：
+```
+Printed in Subclass.
+```
+
+"super"与构造方法
+-----
+构造方法是永远不会被继承的！ 如果我们没有显式地为子类编写构造函数，Java虚拟机JVM会为子类自动生成不带参数的默认构造函数。
+
+`super`关键字还可以被用于在子类中调用(invoke)父类中的构造方法(constructor)。回想一下我们前面提过的`Bicycle`类的例子，在那个例子中，`MountainBike`类是`Bicycle`类的子类。
+
+下面这段代码展示的是在那个例子中，子类`MountainBike`中的构造方法，通过`super`关键字，调用了父类的构造方法。
+
+```java
+public MountainBike(int startHeight, int startCadence, int startSpeed, int startGear) 
+{
+    super(startCadence, startSpeed, startGear);
+}  
+``` 
+
+在子类中使用`super`调用父类中的构造方法的语法是:
+```java
+super();  
+```
+
+或：
+
+```java
+super(parameter1, parameter2, ...）;
+```
+
+若使用`super();`, 父类中不带传入参数列表的构造方法将会被调用。当使用带传入参数的 `super`关键字，例如
+```java
+super(parameter1, parameter2, ...);
+```
+则父类中具有匹配的传入参数列表的构造函数将会被调用。
