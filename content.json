@@ -10,18 +10,20 @@
       "content": "Chapter1/Chapter1.md",
       "sections": [
         {"name":"什么是类"},
-        {"name":"对象"},
-        {"name":"对象类型"},
+        {"name":"属性和方法"},
+        {"name":"对象和对象类型"},
+        {"name":"作用域和三个关键字"},
         {"name":"小练习"}
       ]
     },
     {
-      "name": "类的世界",
+      "name": "类进阶",
       "content": "Chapter2/Chapter2.md",
       "sections": [
-        {"name":"作用域"},
-        {"name":"三个关键字"},
-        {"name":"方法"},
+        {"name":"构造方法"},
+        {"name":"访问器和更改器"},
+        {"name":"方法重载"},
+        {"name":"Javadoc注释"},
         {"name":"小练习"}
       ]
     },
@@ -31,7 +33,6 @@
       "sections": [
         {"name":"原始类型和引用类型"},
         {"name":"空引用"},
-        {"name":"方法参数"},
         {"name":"小练习"}
       ]
     },
@@ -41,6 +42,7 @@
       "sections": [
         {"name":"父类和子类的关系"},
         {"name":"实现继承"},
+        {"name":"方法重写"},
         {"name":"抽象类"},
         {"name":"小练习"}
       ]
@@ -57,10 +59,31 @@
     },
     {
       "name": "接口",
-      "content": "Chapter6/Chapter7.md",
+      "content": "Chapter6/Chapter6.md",
       "sections": [
         {"name":"接口是什么"},
-        {"name":"定义和实现接口"},
+        {"name":"定义接口"},
+        {"name":"实现接口"},
+        {"name":"抽象类与接口的区别"},
+        {"name":"小练习"}
+      ]
+    },
+    {
+      "name": "最终超类——Object类",
+      "content": "Chapter7/Chapter7.md",
+      "sections": [
+        {"name":"Object类是什么"},
+        {"name":"Object类里的方法"},
+        {"name":"小练习"}
+      ]
+    },
+    {
+      "name": "一个特殊而又重要的类——String类",
+      "content": "Chapter8/Chapter8.md",
+      "sections": [
+        {"name":"String对象的创建和修改"},
+        {"name":"String类的方法"},
+        {"name":"String类的比较"},
         {"name":"小练习"}
       ]
     }
