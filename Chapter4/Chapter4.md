@@ -307,6 +307,80 @@ class Boy extends Human{
 
 * **重写方法的参数列表（子类的方法）必须与重写方法（父类的方法）相匹配。参数的数据类型及其顺序应完全匹配。**
 
+方法重写(Override)与方法重载(Overroad)的区别
+-----
+两个方法具有同一个方法名，但传入参数类型/数量不同，这叫方法重载(Overload).
+```java
+void example(String str);
+void example(int number);
+```
+
+两个方法父类与子类有同样的方法名和参数，这叫方法覆盖(Override).
+```java
+class Parent {
+    void test() {
+        System.out.println("This is the test method in parent class.");
+    }
+}
+class Child extends Parent {
+    void test() {
+        System.out.println("This is the test method in subclass.");
+    }
+}
+```
+
 抽象类
 -----
+抽象类
+
+"抽象"这一概念的引入，是面向对象编程的一个重要思想：从高层次的抽象、模糊概念开始，逐步细化化。也就是由抽象到具体，由概念到实现，首先关注的是解决一个问题的总体概念，再逐步逐步把这个总体概念拆分、细化、具体落实下去。
+
+我们可以用"abstract"这个关键字对一个类进行修饰，把这个类定义成抽象的类。同样，我们也可以用"abstract"这个关键字对一个方法进行修饰，把这个方法定义成抽象方法。如：
+```java
+public abstract class Animal{
+    public abstract void eat();
+    public abstract void roam();
+}
+```
+我们注意到，抽象方法是没有方法体的，它们没有方法的具体实现，其只能被定义在抽象类中，不能被定义在普通的类中。
+
+抽象类中可以写抽象的方法，也可以写非抽象的方法（从而避免在子类中重复书写他们，但这不是必须的。）
+
+**抽象方法的具体实现，是在继承抽象类的子类中实现的，并且必须在子类中被完全落实实现。**一个抽象类的子类，可以仍然是抽象的。继承自抽象类的子类有义务去实现抽象类中所有的抽象方法（除非它仍然是抽象类）。当抽象类被子类继承时，子类通常为其父类中的所有抽象方法提供实现。但是，如果没有，那么子类也必须声明为抽象。
+
+来看这样一段代码：
+```java
+public abstract class Animal{
+    String name;
+    String food;
+
+    public abstract void eat();
+    public abstract void roam();
+}
+
+public abstract class Canine extends Animal{
+    public void eat(){
+        System.out.println("Canine animal is eating!")
+    }
+}
+
+public class Dog extends Canine{
+    public void roam(){
+        System.out.println("Dog is running!")
+    }
+    public static void main(String[] args){
+        Dog dog = new Dog();
+        dog.eat();
+        dog.roam();
+    }
+}
+
+在上述代码中，我们用`abstract`关键词定义了一个抽象类`Animal`。在这个抽象类中有两个抽象方法：`eat()`与`roam()`。再次注意，抽象方法只能被定义在抽象类中。
+
+由于其本身也是一个抽象类，`Canine`类作为`Animal`类的子类，不必去完成父类`Animal`中的所有抽象方法。在此，它实现了父类`Animal`中的抽象方法`eat()`.但`roam()`方法在`Canine`类中并未得到具体实现。
+
+`Dog`类就不是一个抽象类了，它是一个普通类。因此，在`Dog`类中，所有未具体实现的抽象方法，必须得到完全具体实现。在此，`Dog`类实现了`roam()`的抽象方法。如果在`Dog`类中再次实现`eat()`方法，则相当于我们上一节所的方法重写。
+
+在具体实现了这些方法后，我们就可以在`main()`方法中对它们进行调用了。在这个过程中，程序由`main()`方法开始执行，在`Dog`类中能找到的方法，如`roam()`，就直接调用，在`Dog`类中找不到的方法，则层层溯源，直到在父类中最终被找到。 
+
 

@@ -149,6 +149,32 @@ public class car {
 ### `public`关键字
 `public`关键字说明的是这个变量或者方法在类外是可见的，不仅可以在类本身里面调用，而且可以在类外通过`.`运算符调用。
 
+
+**注意，如果没有明确使用`public`关键字来修饰一个类或一个方法，该类或方法默认即为`public`属性。例如：**
+```java
+public class Dog{
+
+
+}
+```
+与
+```java
+class Dog{
+
+}
+```
+都是`public`的类。
+
+同样， 
+```java
+public void bark();
+```
+与
+```java
+void bark();
+```
+也都是`public`的类。
+
 ### `private`关键字
 
 使用private修饰符所修饰的方法、属性仅能在本类中使用。如果在其他类中访问`private`变量会在编译时报错误，出现`Compile Error`。
