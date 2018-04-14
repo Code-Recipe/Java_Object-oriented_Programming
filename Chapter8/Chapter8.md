@@ -63,3 +63,25 @@ String s2 = new String(); //此处s2的值是一个空的字符串
 
 String类对象的连接
 -----
+在上面的例子
+```java
+s = "Hello"
+s = s + " Tony!";
+```
+中，我们使用了字符串串联运算符`+`，其操作的对象是字面量。`+`的作用是把两个字面量的值（字符串）串联在一起。
+
+例如，我们有两个对象`lhs`和`rhs`，则语句`lhs + rhs`将生成一个新的字符串，内容为`lhs`的值紧紧跟随者`rhs`的值。如果`lhs`和`rhs`本身都不是`String`类型的字面量，则Java虚拟机JVM会自动为`lhs`和`rhs`对象调用`toString()`方法，然后将`toString()`方法返回的`String`类型的值串联在一起。（是的，如果我们没有为`lhs`与`rhs`对象重写`toString()`方法，最后得到的值可能会很奇怪，不是我们想要的。）如果，其中一个对象是`String`类型，而另一个对象是原始数据类型中的一种，则那个原始数据类型的对象会自动被转为`String`类型的对象，然后再进行串联。如果两个对象都不是`String`类型的对象，则会报错。
+
+下面是几个例子：
+```java
+int number = 7;
+String sayNumber = "The number is ";
+sayNumber = sayNumber + number; //sayNumber的值最终为字符串：The number is 7
+```
+而
+```java
+int x = 3, y = 4;
+String sum = x + y;
+```
+则会报错。我们不能把`int`类型的值直接赋给`String`类型的sum，因为语句x+y中，+运算符的操作对象是两个`int`型对象，其都不是`String`类型对象。在这里，`+`进行代数加法运算，而非字符串串联运算。
+```
