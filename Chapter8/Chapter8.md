@@ -38,13 +38,13 @@ String s = new String("Hello World!");
 
 我们可以**更新**一个`String`类型的字面量：
 ```java
-String s = "John";
-s = "Harry";
+String s = "Sam";
+s = "Tony";
 ```
 这相当于
 ```java
-String s = new String("John");
-s = new String("Harry");
+String s = new String("Sam");
+s = new String("Tony");
 ```
 同学们可能会感到疑惑：我们前面不是说了，字面量一旦定义，就不可**改变**吗？其实，这并不矛盾。我们第一次定义的`John`并没有被**改变**，它只是被直接弃置了。相当于说，`s`对象原本指向内存中一块存储着`John`这个值的地址，后来，对这个地址的指向直接被弃置了，`s`对象被重新定向到内存中一块存储着`Harry`这个值的地址。也就是说，这个字面量是被**更新**了。
 
@@ -53,7 +53,7 @@ s = new String("Harry");
 s = "Hello"
 s = s + " Tony!";
 ```
-s的字面量最终被更新为`Harry Tony!`
+s的字面量最终被更新为`Hello Tony!`
 
 还有另外一些初始化`String`字面量的方法：java
 ```
