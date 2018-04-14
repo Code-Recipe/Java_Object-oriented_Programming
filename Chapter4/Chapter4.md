@@ -372,6 +372,7 @@ public class Dog extends Canine{
         dog.roam();
     }
 }
+```
 
 在上述代码中，我们用`abstract`关键词定义了一个抽象类`Animal`。在这个抽象类中有两个抽象方法：`eat()`与`roam()`。再次注意，抽象方法只能被定义在抽象类中。
 
