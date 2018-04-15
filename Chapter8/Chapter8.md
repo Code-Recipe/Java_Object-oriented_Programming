@@ -76,7 +76,6 @@ public class Hello {
 int x = 3, y = 4;
 String sum = x + y;
 ```
-<<<<<<< HEAD
 则会报错。我们不能把`int`类型的值直接赋给`String`类型的sum，因为语句x+y中，+运算符的操作对象是两个`int`型对象，其都不是`String`类型对象。在这里，`+`进行代数加法运算，而非字符串串联运算。
 
 
@@ -139,10 +138,7 @@ public class Test {
 返回值为
 ```java
 coderecipe.cn
-=======
 
-这是因为我们不能把`int`类型的值直接赋给`String`类型的sum，因为语句x+y中，+运算符的操作对象是两个`int`型对象，其都不是`String`类型对象。在这里，`+`进行代数加法运算，而非字符串串联运算。
->>>>>>> 74d6164dea06c356091fbfc3b7d7d82bc8dbb131
 ```
 注意，如果传入参数`startIndex`的值为负数或大于字符串的长度，将抛出
 ```java
