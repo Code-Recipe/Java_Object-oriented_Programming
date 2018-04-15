@@ -247,7 +247,7 @@ Cat.testClassMethod();
 
 来试试看！
 
-<lab lang="java" parameters="filename=Cat.java">
+<lab lang="java" parameters="filename=Animal.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
 public class Animal {
     public static void testClassMethod() {
@@ -257,8 +257,6 @@ public class Animal {
         System.out.println("The instance method in Animal");
     }
 }
-
-
 public class Cat extends Animal {
     public static void testClassMethod() {
         System.out.println("The static method in Cat");

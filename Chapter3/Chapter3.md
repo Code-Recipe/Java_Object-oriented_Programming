@@ -36,17 +36,17 @@ public class Dog {
   int age;
 
   public void showInfo(){
-    System.out.println("I'm " + age + " years old.");
+  System.out.println("I'm " + age + " years old.");
   }
 
   public static void main(String[] args) {
-    Dog myPuppy = new Dog();
-    myPuppy.age = 2;
-    Dog mySecondPuppy = myPuppy;
-    mySecondPuppy.age = 3;
+  Dog myPuppy = new Dog();
+  myPuppy.age = 2;
+  Dog mySecondPuppy = myPuppy;
+  mySecondPuppy.age = 3;
 
-    myPuppy.showInfo();
-    mySecondPuppy.showInfo();
+  myPuppy.showInfo();
+  mySecondPuppy.showInfo();
   }
 }
 </lab>
@@ -64,11 +64,11 @@ public class Dog {
   int age;
 
   public void showInfo(){
-    System.out.println("I'm " + age + " years old.");
+  System.out.println("I'm " + age + " years old.");
   }
 
   public static void main(String[] args) {
-    Dog myPuppy;
+  Dog myPuppy;
   }
 }
 </lab>
@@ -81,13 +81,13 @@ public class Dog {
   int age;
 
   public void showInfo(){
-    System.out.println("I'm " + age + " years old.");
+  System.out.println("I'm " + age + " years old.");
   }
 
   public static void main(String[] args) {
-    Dog myPuppy;
+  Dog myPuppy;
 
-    myPuppy.showInfo();
+  myPuppy.showInfo();
   }
 }
 </lab>
@@ -103,13 +103,13 @@ public class Dog {
   Dog son;
 
   public void showInfo(){
-    System.out.println("I'm " + age + " years old.");
+  System.out.println("I'm " + age + " years old.");
   }
 
   public static void main(String[] args) {
-    Dog myPuppy = new Dog();
-    System.out.println(myPuppy.son);
-    myPuppy.son.showInfo();
+  Dog myPuppy = new Dog();
+  System.out.println(myPuppy.son);
+  myPuppy.son.showInfo();
   }
 }
 </lab>
@@ -124,16 +124,16 @@ public class Dog {
   int age;
 
   public void showInfo(){
-    System.out.println("I'm " + age + " years old.");
+  System.out.println("I'm " + age + " years old.");
   }
 
   public static void main(String[] args) {
-    Dog myPuppy = null;
-    if(myPuppy != null) {
-      myPuppy.showInfo();
-    } else {
-      System.out.println("myPuppy is null");
-    }
+  Dog myPuppy = null;
+  if(myPuppy != null) {
+  myPuppy.showInfo();
+  } else {
+  System.out.println("myPuppy is null");
+  }
   }
 }
 </lab>

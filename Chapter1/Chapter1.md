@@ -212,6 +212,21 @@ public class Hello {
 
 小练习
 -----
+1.Which of the following represents correct implementation code for the constructor
+with parameters?
+(A) hrs = 0;
+mins = 0;
+secs = 0;
+(B) hrs = h;
+mins = m;
+secs = s;
+(C) resetTime(hrs, mins, secs);
+(D) h = hrs;
+m = mins;
+s = secs;
+(E) Time = new Time(h, m, s);
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E</cr>
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
