@@ -42,7 +42,7 @@ public class Bicycle {
         cadence = startCadence;
         speed = startSpeed;
     }
-    
+
     public void printDescription(){
         System.out.println("\nBike is " + "in gear " + this.gear
         + " with a cadence of " + this.cadence +
@@ -65,7 +65,7 @@ public class MountainBike extends Bicycle {
         System.out.println("The " + "MountainBike has a" +
             getSuspension() + " suspension.");
     }
-} 
+}
 
 
 public class RoadBike extends Bicycle{
@@ -114,7 +114,7 @@ public class Bicycle {
         cadence = startCadence;
         speed = startSpeed;
     }
-    
+
     public void printDescription(){
         System.out.println("\nBike is " + "in gear " + this.gear
         + " with a cadence of " + this.cadence +
@@ -143,7 +143,7 @@ public class MountainBike extends Bicycle {
         System.out.println("The " + "MountainBike has a" +
             getSuspension() + " suspension.");
     }
-} 
+}
 
 ```
 请注意重写的`printDescription`方法。 除了之前提供的信息之外，输出中还包括有关悬挂缓冲系统的其他信息。
@@ -188,12 +188,12 @@ public class TestBikes {
 ```
 则运行结果为：
 ```
-Bike is in gear 1 with a cadence of 20 and travelling at a speed of 10. 
+Bike is in gear 1 with a cadence of 20 and travelling at a speed of 10.
 
-Bike is in gear 5 with a cadence of 20 and travelling at a speed of 10. 
+Bike is in gear 5 with a cadence of 20 and travelling at a speed of 10.
 The MountainBike has a Dual suspension.
 
-Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20. 
+Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20.
 The RoadBike has 23 MM tires.
 ```
 
@@ -301,7 +301,7 @@ student.getID()
 
 在静态绑定中，编译器会通过分析比较实例方法的签名特点、逻辑层次归属等等，来选择正确的方法重载，并且一旦选择完毕，就在编译时将这样的绑定关系定死了，不可能再改变了。
 
-而在多态的实现中，当遭遇到方法重写，最终哪一个实例方法会被调用这个决定，不是由编译器在编译时决定的。 
+而在多态的实现中，当遭遇到方法重写，最终哪一个实例方法会被调用这个决定，不是由编译器在编译时决定的。
 
 在动态绑定的过程中，编译器所做的事情是，判断一个方法能否被合法地调用。而，运行时环境（Java虚拟机JVM）才是最终作出关于究竟要调用被重写的方法中的哪一个实例方法的决定的那个角色。
 来看下面这个例子：
@@ -416,11 +416,11 @@ Printed in Subclass.
 下面这段代码展示的是在那个例子中，子类`MountainBike`中的构造方法，通过`super`关键字，调用了父类的构造方法。
 
 ```java
-public MountainBike(int startHeight, int startCadence, int startSpeed, int startGear) 
+public MountainBike(int startHeight, int startCadence, int startSpeed, int startGear)
 {
     super(startCadence, startSpeed, startGear);
 }  
-``` 
+```
 
 在子类中使用`super`调用父类中的构造方法的语法是:
 ```java
@@ -443,28 +443,49 @@ super(parameter1, parameter2, ...);
 -----
 A program to test the BankAccount, SavingsAccount, and CheckingAccount classes has
 these declarations:
+
 BankAccount b = new BankAccount(1400);
+
 BankAccount s = new SavingsAccount(1000, 0.04);
+
 BankAccount c = new CheckingAccount(500);
 
 1. Which method call will cause an error?
+
 (A) b.deposit(200);
+
 (B) s.withdraw(500);
+
 (C) c.withdraw(500);
+
 (D) s.deposit(10000);
+
 (E) s.addInterest();
+
 2. In order to test polymorphism, which method must be used in the program?
+
 (A) Either a SavingsAccount constructor or a CheckingAccount constructor
+
 (B) addInterest
+
 (C) deposit
+
 (D) withdraw
+
 (E) getBalance
+
 Multiple-Choice Questions on Inheritance and Polymorphism 153
+
 3. Which of the following will not cause a ClassCastException to be thrown?
+
 (A) ((SavingsAccount) b).addInterest();
+
 (B) ((CheckingAccount) b).withdraw(200);
+
 (C) ((CheckingAccount) c).deposit(800);
+
 (D) ((CheckingAccount) s).withdraw(150);
+
 (E) ((SavingsAccount) c).addInterest();
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E, D, C</cr>
@@ -478,4 +499,3 @@ public class Hello {
    }
 }
 </lab>
-

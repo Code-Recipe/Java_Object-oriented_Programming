@@ -90,7 +90,7 @@ Date d2 = new Date(26, 7, 2017);
 ```
 则
 ```java
-String s = "My birthday is " + d2; 
+String s = "My birthday is " + d2;
 ```
 将会返回
 ```
@@ -104,7 +104,7 @@ String s2 = d1 + d2; //error: + not defined for objects
 而
 ```java
 String s3 = d1.toString() + d2.toString();
-``` 
+```
 将会返回
 14/4/201826/7/2017
 
@@ -170,7 +170,7 @@ coderecipe
 ```java
 int indexOf(String str)
 ```
-该方法的作用是，返回一个子字符串的第一个字符在原字符串中的位置。 
+该方法的作用是，返回一个子字符串的第一个字符在原字符串中的位置。
 例如：
 ```java
 String s = "funnyfarm";
@@ -208,18 +208,18 @@ if (string1.equals(string2)) ...
 例如：
 ```java
 public class Test {
- 
+
     public static void main(String args[]) {
         String str1 = "Strings";
         String str2 = "Strings";
         String str3 = "Strings123";
- 
+
         int result = str1.compareTo( str2 );
         System.out.println(result);
-      
+
         result = str2.compareTo( str3 );
         System.out.println(result);
-     
+
         result = str3.compareTo( str1 );
         System.out.println(result);
     }
@@ -227,7 +227,7 @@ public class Test {
 ```
 的结果为
 ```
-0 
+0
 -3
 3
 ```
@@ -267,16 +267,26 @@ if (s == t) ...
 小练习
 -----
 Refer to these declarations:
+```java
 Integer k = new Integer(8);
 Integer m = new Integer(4);
+```
 Which test will not generate an error?
+
 I if (k.intValue() == m.intValue())...
+
 II if ((k.intValue()).equals(m.intValue()))...
+
 III if ((k.toString()).equals(m.toString()))...
+
 (A) I only
+
 (B) II only
+
 (C) III only
+
 (D) I and III only
+
 (E) I, II, and III
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>D</cr>
