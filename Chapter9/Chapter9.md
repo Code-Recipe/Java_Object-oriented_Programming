@@ -69,9 +69,7 @@
 
 Program (永远不要用program来命名，完全不清楚是用来干什么的)
 
-Teacher（男和女有时候有不同的名字，性别错了有些尴尬）
-
-Data，Record（跟方法名字可能重合，避免混淆）
+Data，Record（跟方法或者属性名字可能重合，避免混淆）
 
 Class(和class关键字重名，不要使用)
 

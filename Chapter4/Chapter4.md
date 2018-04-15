@@ -264,7 +264,6 @@ public class Cat extends Animal {
     public void testInstanceMethod() {
         System.out.println("The instance method in Cat");
     }
-
     public static void main(String[] args) {
         Cat myCat = new Cat();
         Animal myAnimal = myCat;
@@ -348,7 +347,6 @@ public abstract class Animal{
 public abstract class Animal{
     String name;
     String food;
-
     public abstract void eat();
     public abstract void roam();
 }

@@ -57,7 +57,6 @@ public class Sardine extends Fish implements SwimmingObject
 }
 ```
 
-
 **注意：在这样使用时，`extends`关键字必须出现在implement关键词之前。**
 
 前面我们提到，一个类只能直接继承自一个父类，不可能出现一个类同时直接继承自很多个父类的情况。而一个接口可以扩展任意数量的接口。同样的，一个类只能直接继承自一个父类，却可以同时接上多
