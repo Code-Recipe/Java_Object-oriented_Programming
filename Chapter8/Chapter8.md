@@ -262,3 +262,31 @@ if (s == t) ...
 这个测试的结果是`false`，因为我们强心创建了一个新的引用对象。`s`和`t`在此时就不指向同一个引用对象了。
 
 这个故事的寓意是什么？ 在于，我们应该总是使用`equals()`方法而非`==`来测试字符串。`equals()`方法总是做正确的事情。
+
+
+小练习
+-----
+Refer to these declarations:
+Integer k = new Integer(8);
+Integer m = new Integer(4);
+Which test will not generate an error?
+I if (k.intValue() == m.intValue())...
+II if ((k.intValue()).equals(m.intValue()))...
+III if ((k.toString()).equals(m.toString()))...
+(A) I only
+(B) II only
+(C) III only
+(D) I and III only
+(E) I, II, and III
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>D</cr>
+
+在这里练习吧：
+<lab lang="java" parameters="filename=Hello.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+public class Hello {
+   public static void main(String[] args) {
+     // 在这里添加你的代码
+   }
+}
+</lab>

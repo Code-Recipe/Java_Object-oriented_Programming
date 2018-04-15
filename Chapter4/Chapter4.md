@@ -247,7 +247,7 @@ Cat.testClassMethod();
 
 来试试看！
 
-<lab lang="java" parameters="filename=Cat.java">
+<lab lang="java" parameters="filename=Animal.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
 public class Animal {
     public static void testClassMethod() {
@@ -257,8 +257,6 @@ public class Animal {
         System.out.println("The instance method in Animal");
     }
 }
-
-
 public class Cat extends Animal {
     public static void testClassMethod() {
         System.out.println("The static method in Cat");
@@ -381,4 +379,29 @@ public class Dog extends Canine{
 
 在具体实现了这些方法后，我们就可以在`main()`方法中对它们进行调用了。在这个过程中，程序由`main()`方法开始执行，在`Dog`类中能找到的方法，如`roam()`，就直接调用，在`Dog`类中找不到的方法，则层层溯源，直到在父类中最终被找到。 
 
+小练习
+-----
+Which of the following correctly implements the default constructor of the
+SavingsAccount class?
+I interestRate = 0;
+super();
+II super();
+interestRate = 0;
+III super();
+(A) II only
+(B) I and II only
+(C) II and III only
+(D) III only
+(E) I, II, and III
 
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>B</cr>
+
+在这里练习吧：
+<lab lang="java" parameters="filename=Hello.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+public class Hello {
+   public static void main(String[] args) {
+     // 在这里添加你的代码
+   }
+}
+</lab>

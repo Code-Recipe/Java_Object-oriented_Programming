@@ -440,7 +440,35 @@ super(parameter1, parameter2, ...);
 则父类中具有匹配的传入参数列表的构造函数将会被调用。
 
 小练习
-------
+-----
+A program to test the BankAccount, SavingsAccount, and CheckingAccount classes has
+these declarations:
+BankAccount b = new BankAccount(1400);
+BankAccount s = new SavingsAccount(1000, 0.04);
+BankAccount c = new CheckingAccount(500);
+
+1. Which method call will cause an error?
+(A) b.deposit(200);
+(B) s.withdraw(500);
+(C) c.withdraw(500);
+(D) s.deposit(10000);
+(E) s.addInterest();
+2. In order to test polymorphism, which method must be used in the program?
+(A) Either a SavingsAccount constructor or a CheckingAccount constructor
+(B) addInterest
+(C) deposit
+(D) withdraw
+(E) getBalance
+Multiple-Choice Questions on Inheritance and Polymorphism 153
+3. Which of the following will not cause a ClassCastException to be thrown?
+(A) ((SavingsAccount) b).addInterest();
+(B) ((CheckingAccount) b).withdraw(200);
+(C) ((CheckingAccount) c).deposit(800);
+(D) ((CheckingAccount) s).withdraw(150);
+(E) ((SavingsAccount) c).addInterest();
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E, D, C</cr>
+
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
@@ -450,3 +478,4 @@ public class Hello {
    }
 }
 </lab>
+

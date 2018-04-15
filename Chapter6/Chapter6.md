@@ -73,3 +73,26 @@ public class SubClass extends SuperClass implements Interface1, Interface2, ...
 抽象类是对一种事物的抽象，即对类抽象，而接口是对行为的抽象。抽象类是对整个类整体进行抽象，包括属性、行为，但是接口却是针对类的行为（方法）进行抽象，而不包括属性（接口中不能定义实例变量）。
 
 当一种方法，对于正在编写的程序来说是非常适用的，但这种方法同时对其他的程序也同样适用时，我们就可以考虑使用接口。
+
+小练习
+-----
+1. Which statement about abstract classes and interfaces is false?
+(A) An interface cannot implement any non-default instance methods, whereas
+an abstract class can.
+(B) A class can implement many interfaces but can have only one superclass.
+(C) An unlimited number of unrelated classes can implement the same interface.
+(D) It is not possible to construct either an abstract class object or an interface
+object.
+(E) All of the methods in both an abstract class and an interface are public.
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E</cr>
+
+在这里练习吧：
+<lab lang="java" parameters="filename=Hello.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+public class Hello {
+   public static void main(String[] args) {
+     // 在这里添加你的代码
+   }
+}
+</lab>

@@ -114,7 +114,7 @@ public class Dog {
         Dog myDog1 = new Dog("Tom", "Male", 2);
         Dog myDog2 = new Dog("Sam", "Male",3);
         Dog myDog3 = new Dog("Lily","Female",4);
-        Dog myDog4 = new Dog("Sally","Female",5)
+        Dog myDog4 = new Dog("Sally","Female",5);
     }
 }
 </lab>
@@ -141,14 +141,14 @@ public class Dog{
         /* 通过方法来设定name */
         myDog.setName("myPuppy");
         /* 调用另一个方法获取name */
-        myDog.getName( );
+        myDog.getName();
         /*你也可以像下面这样访问成员变量 */
         System.out.println("name值 : " + myDog.getName() );
     }
 }
 ```
 来试试看编译运行结果吧！
-<lab lang="java" parameters="filename=car.java">
+<lab lang="java" parameters="filename=Dog.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
 public class Dog{
     String name;
@@ -160,13 +160,9 @@ public class Dog{
         return name;
     }
     public static void main(String []args){
-        /* 创建对象 */
         Dog myDog = new Dog();
-        /* 通过方法来设定name */
         myDog.setName("myPuppy");
-        /* 调用另一个方法获取name */
         myDog.getName();
-        /*你也可以像下面这样访问成员变量 */
         System.out.println("name值 : " + myDog.getName() );
     }
 }
@@ -210,7 +206,7 @@ public class cat {
 其中，我们有三个同名的`cat`方法。 它们的区别在于，前者的传入参数列表为空，后者则定义了三个传入参数，再后者则定义了四个。程序在执行的时候，会根据用户给其的传入参数不同，自动给出它所要调用的方法。对象`cat1`的传入参数列表为空，故`cat1`自动对应的是第一个`cat()`方法；对象`cat2`有三个传入参数，故`cat2`自动对应的是第二个`cat`方法；对象`cat3`有四个传入参数，故`cat3`自动对应的是第三个`cat`方法。
 
 来试试看编译运行结果吧！
-<lab lang="java" parameters="filename=car.java">
+<lab lang="java" parameters="filename=cat.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
 public class cat {
     String name;
@@ -263,6 +259,36 @@ public E put(Location loc, E obj) { // 这是方法定义
 
 小练习
 -----
+```java
+public class Tester
+{
+public void someMethod(int a, int b)
+{
+int temp = a;
+a = b;
+b = temp;
+}
+}
+public class TesterMain
+{
+public static void main(String[] args)
+{
+int x = 6, y = 8;
+Tester tester = new Tester();
+tester.someMethod(x, y);
+}
+}
+```
+Just before the end of execution of this program, what are the values of x, y, and
+temp, respectively?
+(A) 6, 8, 6
+(B) 8, 6, 6
+(C) 6, 8, ?, where ? means undefined
+(D) 8, 6, ?, where ? means undefined
+(E) 8, 6, 8
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>C</cr>
+
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">

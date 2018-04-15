@@ -74,3 +74,43 @@ Teacher（男和女有时候有不同的名字，性别错了有些尴尬）
 Data，Record（跟方法名字可能重合，避免混淆）
 
 Class(和class关键字重名，不要使用)
+
+小练习
+-----
+1. A program that reads in a five-digit identification number is to be written. The
+specification does not state whether zero can be entered as a first digit. The programmer
+should
+(A) write the code to accept zero as a first digit since zero is a valid digit.
+(B) write the code to reject zero as a first digit since five-digit integers do not
+start with zero.
+(C) eliminate zero as a possibility for any of the digits.
+(D) treat the identification number as a four-digit number if the user enters a
+number starting with zero.
+(E) check with the writer of the specification whether zero is acceptable as a
+first digit.
+2. Refer to the following three program descriptions:
+I Test whether there exists at least one three-digit integer whose value equals
+the sum of the squares of its digits.
+II Read in a three-digit code number and check if it is valid according to some
+given formula.
+III Passwords consist of three digits and three capital letters in any order. Read
+in a password, and check if there are any repeated characters.
+For which of the preceding program descriptions would a ThreeDigitNumber
+class be suitable?
+(A) I only
+(B) II only
+(C) III only
+(D) I and II only
+(E) I, II, and III
+3. Top-down programming is illustrated by which of the following?
+(A) Writing a program from top to bottom in Java
+(B) Writing an essay describing how the program will work, without including
+any Java code
+(C) Using driver programs to test all methods in the order that they’re called in
+the program
+(D) Writing and testing the lowest level methods first and then combining them
+to form appropriate abstract operations
+(E) Writing the program in terms of the operations to be performed and then
+refining these operations by adding more detail
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E, D, E</cr>
