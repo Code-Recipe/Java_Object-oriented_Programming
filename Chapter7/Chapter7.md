@@ -94,7 +94,29 @@ System.out.println(d1.equals(d3));
 ```
 将返回`true`，因为，尽管`d1`与`d2`在引用上不相同（二者指向不同的对象，一个是`d1`，一个是`d2`），但二者的**内容**是一样的，都是同一个日期。
 
+小练习
+-----
+Consider the code fragment
+Object intObj = new Integer(9);
+System.out.println((String) intObj);
+What will be output as a result of running the fragment?
+(A) No output. A ClassCastExceptionwill be thrown.
+(B) No output. An ArithmeticExceptionwill be thrown.
+(C) 9
+(D) "9"
+(E) nine
 
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>A</cr>
+
+在这里练习吧：
+<lab lang="java" parameters="filename=Hello.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+public class Hello {
+   public static void main(String[] args) {
+     // 在这里添加你的代码
+   }
+}
+</lab>
 
 
 
