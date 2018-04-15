@@ -237,11 +237,11 @@ The instance method in Cat
 
 如果我们把
 ```java
-        Animal.testClassMethod();
+Animal.testClassMethod();
 ```
 改成
 ```java
-        Cat.testClassMethod();
+Cat.testClassMethod();
 ```
 会发生什么呢？
 
@@ -305,8 +305,8 @@ class Boy extends Human{
 
 * **重写方法的参数列表（子类的方法）必须与重写方法（父类的方法）相匹配。参数的数据类型及其顺序应完全匹配。**
 
-方法重写(Override)与方法重载(Overroad)的区别
------
+### 方法重写(Override)与方法重载(Overroad)的区别
+
 两个方法具有同一个方法名，但传入参数类型/数量不同，这叫方法重载(Overload).
 ```java
 void example(String str);
@@ -329,7 +329,6 @@ class Child extends Parent {
 
 抽象类
 -----
-抽象类
 
 "抽象"这一概念的引入，是面向对象编程的一个重要思想：从高层次的抽象、模糊概念开始，逐步细化化。也就是由抽象到具体，由概念到实现，首先关注的是解决一个问题的总体概念，再逐步逐步把这个总体概念拆分、细化、具体落实下去。
 

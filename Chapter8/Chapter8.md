@@ -35,7 +35,6 @@ String s = new String("Hello World!");
 ```
 在上述两个语句例子中，`s`都是一个值为`Hello World!`的字面量。
 
-
 我们可以**更新**一个`String`类型的字面量：
 ```java
 String s = "Sam";
@@ -55,34 +54,29 @@ s = s + " Tony!";
 ```
 s的字面量最终被更新为`Hello Tony!`
 
-还有另外一些初始化`String`字面量的方法：java
-```
-String s1 = null; //此处s1是空引用
-String s2 = new String(); //此处s2的值是一个空的字符串
-```
+例如，我们有两个对象`lhs`和`rhs`，则语句`lhs + rhs`将生成一个新的字符串，内容为`lhs`的值紧紧跟随者`rhs`的值。如果`lhs`和`rhs`本身都不是`String`类型的字面量，则Java会自动为`lhs`和`rhs`对象调用`toString()`方法，然后将`toString()`方法返回的`String`类型的值串联在一起。（是的，如果我们没有为`lhs`与`rhs`对象重写`toString()`方法，最后得到的值可能会很奇怪，不是我们想要的。）如果，其中一个对象是`String`类型，而另一个对象是原始数据类型中的一种，则那个原始数据类型的对象会自动被转为`String`类型的对象，然后再进行串联。如果两个对象都不是`String`类型的对象，则会报错。
 
-String类对象的连接
------
-在上面的例子
-```java
-s = "Hello"
-s = s + " Tony!";
-```
-中，我们使用了字符串串联运算符`+`，其操作的对象是字面量。`+`的作用是把两个字面量的值（字符串）串联在一起。
+这个例子中的代码可以工作：
+<lab lang="java" parameters="filename=Hello.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+public class Hello {
+   public static void main(String[] args) {
+       int number = 7;
+       String sayNumber = "The number is ";
+       sayNumber = sayNumber + number;
+       System.out.println(sayNumber);
+   }
+}
+</lab>
+最终串联起了字符串。
 
-例如，我们有两个对象`lhs`和`rhs`，则语句`lhs + rhs`将生成一个新的字符串，内容为`lhs`的值紧紧跟随者`rhs`的值。如果`lhs`和`rhs`本身都不是`String`类型的字面量，则Java虚拟机JVM会自动为`lhs`和`rhs`对象调用`toString()`方法，然后将`toString()`方法返回的`String`类型的值串联在一起。（是的，如果我们没有为`lhs`与`rhs`对象重写`toString()`方法，最后得到的值可能会很奇怪，不是我们想要的。）如果，其中一个对象是`String`类型，而另一个对象是原始数据类型中的一种，则那个原始数据类型的对象会自动被转为`String`类型的对象，然后再进行串联。如果两个对象都不是`String`类型的对象，则会报错。
+而下面这段代码无法运行：
 
-下面是几个例子：
-```java
-int number = 7;
-String sayNumber = "The number is ";
-sayNumber = sayNumber + number; //sayNumber的值最终为字符串：The number is 7
-```
-而
 ```java
 int x = 3, y = 4;
 String sum = x + y;
 ```
+<<<<<<< HEAD
 则会报错。我们不能把`int`类型的值直接赋给`String`类型的sum，因为语句x+y中，+运算符的操作对象是两个`int`型对象，其都不是`String`类型对象。在这里，`+`进行代数加法运算，而非字符串串联运算。
 
 
@@ -145,6 +139,10 @@ public class Test {
 返回值为
 ```java
 coderecipe.cn
+=======
+
+这是因为我们不能把`int`类型的值直接赋给`String`类型的sum，因为语句x+y中，+运算符的操作对象是两个`int`型对象，其都不是`String`类型对象。在这里，`+`进行代数加法运算，而非字符串串联运算。
+>>>>>>> 74d6164dea06c356091fbfc3b7d7d82bc8dbb131
 ```
 注意，如果传入参数`startIndex`的值为负数或大于字符串的长度，将抛出
 ```java

@@ -407,7 +407,7 @@ System.out.println("Printed in Subclass.");
 Printed in Subclass.
 ```
 
-"super"与构造方法
+“super”与构造方法
 -----
 构造方法是永远不会被继承的！ 如果我们没有显式地为子类编写构造函数，Java虚拟机JVM会为子类自动生成不带参数的默认构造函数。
 
@@ -438,3 +438,15 @@ super(parameter1, parameter2, ...）;
 super(parameter1, parameter2, ...);
 ```
 则父类中具有匹配的传入参数列表的构造函数将会被调用。
+
+小练习
+------
+在这里练习吧：
+<lab lang="java" parameters="filename=Hello.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+public class Hello {
+   public static void main(String[] args) {
+     // 在这里添加你的代码
+   }
+}
+</lab>
