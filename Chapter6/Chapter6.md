@@ -66,7 +66,7 @@ public class Sardine extends Fish implements SwimmingObject
 public class SubClass extends SuperClass implements Interface1, Interface2, ...
 ```
 
-接口与抽象类的异同
+抽象类与接口的区别
 -----
 抽象类与接口相似。二者都不能被实例化，并可能都包含了一系列方法（或具体或抽象）（在接口中使用具体的方法是Java 8中的新特性，一般而言接口只提供抽象的方法，具体的方法AP不考察）。然而，在接口中是不可以定义实例变量的，而在抽象类中可以。并且，一个类只能继承一个直接父类，这个父类可以是具体的类也可是抽象类；但是一个类可以接上多个接口。抽象类中的方法可以是各种类型的，而接口中的成员变量只能是`public static final`类型的。
 

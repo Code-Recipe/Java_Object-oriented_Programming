@@ -51,9 +51,12 @@
       "name": "多态",
       "content": "Chapter5/Chapter5.md",
       "sections": [
+        {"name":"初识多态"},
+        {"name":"再谈多态"},
         {"name":"类型转换"},
         {"name":"动态绑定"},
         {"name":"使用“super”调用父类"},
+        {"name":"“super”与构造方法"},
         {"name":"小练习"}
       ]
     },
@@ -81,7 +84,7 @@
       "name": "一个特殊而又重要的类——String类",
       "content": "Chapter8/Chapter8.md",
       "sections": [
-        {"name":"String对象的创建和修改"},
+        {"name":"String对象的创建和更新"},
         {"name":"String类的方法"},
         {"name":"String类的比较"},
         {"name":"小练习"}
