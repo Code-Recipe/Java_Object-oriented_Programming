@@ -22,7 +22,7 @@
 ```java
 public interface SwimmingObject
 {
-    void swim(); 
+    void swim();
     //method that simulates swimming of object
     boolean isSwimming(); //true if object is swimming, false otherwise
 }
@@ -76,12 +76,17 @@ public class SubClass extends SuperClass implements Interface1, Interface2, ...
 小练习
 -----
 1. Which statement about abstract classes and interfaces is false?
+
 (A) An interface cannot implement any non-default instance methods, whereas
 an abstract class can.
+
 (B) A class can implement many interfaces but can have only one superclass.
+
 (C) An unlimited number of unrelated classes can implement the same interface.
+
 (D) It is not possible to construct either an abstract class object or an interface
 object.
+
 (E) All of the methods in both an abstract class and an interface are public.
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E</cr>
