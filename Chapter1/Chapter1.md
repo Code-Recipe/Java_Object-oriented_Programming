@@ -210,6 +210,61 @@ public class Hello {
 
 我们之前学的`Math`类里面的方法其实就是实例方法（如`Math.random`，不需要新建一个`Math`类的实例），`Math`里面的常数也都是实例变量（如`Math.PI`）。
 
+`this`关键字
+-----
+
+### 引用成员变量
+
+在Java中，一个实例方法或实例变量【也就是不是静态方法/变量（类方法/变量）的方法/变量】总是被一个特定的对象所调用的。而这一个『特定的对象』，就是其所调用的实例方法的一个『隐传入参数』(implicit parameter)，相当于传入了『是哪个对象调用了这个方法？』这样一个信息。在Java中，这一个特定的对象，可以用关键字`this`来方便地引用。
+
+```java
+public class dog {
+   String name;
+   void bark(){
+     System.out.println("I'm barking!");
+    }
+    public static void main(String[] args){
+      dog dog1 = new dog();
+      dog1.name = "bobo";
+      dog1.bark();
+      }
+}
+```
+
+例如，在这个例子中，dog1是类中的一个对象，而name、bark（）则分别为实例变量、实例方法。在这里，bark()的传入参数为空，也就是说bark()方法没有"显式传入参数，但其『隐式传入参数』就是其引用者：dog1。
+
+```java
+public class Student { 
+  String name; //定义一个成员变量name 
+  private void SetName(String name)//定义一个参数(局部变量)name
+   {
+    this.name=name; //将局部变量的值传递给成员变量
+   }
+}
+```
+
+this这个关键字代表的就是对象中的成员变量或者方法。也就是说，如果在某个变量前面加上一个this关键字，其指的就是这个对象的成员变量或者方法，而不是指成员方法的形式参数或者局部变量。
+
+### 调用类的构造方法
+
+```java
+public class Student { //定义一个类，类的名字为student
+    public Student() { //定义一个方法，名字与类相同故为构造方法
+      this("Hello!");
+    }
+   public Student(String name) { //定义一个带形式参数的构造方法
+   }
+}
+```
+
+Student方法有两个构造方法，一个没有参数，一个有参数。在第一个没有带参数的构造方法中，使用了this(“Hello!”)这句代码，这句代码表示使用this关键字调用类中的有一个参数的构造方法。
+
+### 返回对象的值
+
+this关键字除了可以引用变量或者构造方法之外，还有一个重大的作用就是返回类的引用。如在代码中，可以使用return this，来返回某个类的引用。此时这个this关键字就代表类的名称。
+如代码在上面student类中使用return this，那么代码代表的含义就是return student。
+可见，这个this关键字除了可以引用变量或者成员方法之外，还可以作为类的返回值，这才是this关键字最引人注意的地方。
+
 小练习
 -----
 1.Which of the following represents correct implementation code for the constructor
