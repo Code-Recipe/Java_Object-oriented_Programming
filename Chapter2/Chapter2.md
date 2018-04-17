@@ -18,28 +18,23 @@ public class Dog {
   String name;
   String sex;
   int age;
-
-public void bark(){
-  System.out.println("I'm barking!!!");
+  public void bark(){
+    System.out.println("I'm barking!!!");
   }
-
-public void eat(){
-  System.out.println("I'm eating!!!");
+  public void eat(){
+    System.out.println("I'm eating!!!");
   }
-
-public void showInfo(){
-  System.out.println("My name is " + name + ", and my sex is " + sex + ". I'm " + age + " years old.");
+  public void showInfo(){
+    System.out.println("My name is " + name + ", and my sex is " + sex + ". I'm " + age + " years old.");
   }
-
-public static void main(String[] args) {
-  Dog myPuppy = new Dog();
-  myPuppy.name = "CoolmyPuppy";
-  myPuppy.age = 2;
-  myPuppy.sex = "male";
-
-  myPuppy.bark();
-  myPuppy.eat();
-  myPuppy.showInfo();
+  public static void main(String[] args) {
+    Dog myPuppy = new Dog();
+    myPuppy.name = "CoolmyPuppy";
+    myPuppy.age = 2;
+    myPuppy.sex = "male";
+    myPuppy.bark();
+    myPuppy.eat();
+    myPuppy.showInfo();
   }
 }
 </lab>
@@ -71,15 +66,12 @@ public class Dog {
     public Dog(String name, String sex, int age){
         System.out.println("My name is " + name + ", and my sex is " + sex + ". I'm " + age + " years old.");
     }
-
     public void bark() {
         System.out.println("I'm barking!");
     }
-
     public void eat() {
         System.out.println("I'm eating!");
     }
-
     public static void main(String[] args) {
         Dog myPuppy = new Dog("CoolmyPuppy","male", 2);
         myPuppy.bark();

@@ -97,13 +97,20 @@ System.out.println(d1.equals(d3));
 小练习
 -----
 Consider the code fragment
+```java
 Object intObj = new Integer(9);
 System.out.println((String) intObj);
+```
 What will be output as a result of running the fragment?
+
 (A) No output. A ClassCastExceptionwill be thrown.
+
 (B) No output. An ArithmeticExceptionwill be thrown.
+
 (C) 9
+
 (D) "9"
+
 (E) nine
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>A</cr>
@@ -117,7 +124,3 @@ public class Hello {
    }
 }
 </lab>
-
-
-
-

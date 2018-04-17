@@ -22,7 +22,7 @@
 ```java
 public interface SwimmingObject
 {
-    void swim(); 
+    void swim();
     //method that simulates swimming of object
     boolean isSwimming(); //true if object is swimming, false otherwise
 }
@@ -57,7 +57,6 @@ public class Sardine extends Fish implements SwimmingObject
 }
 ```
 
-
 **注意：在这样使用时，`extends`关键字必须出现在implement关键词之前。**
 
 前面我们提到，一个类只能直接继承自一个父类，不可能出现一个类同时直接继承自很多个父类的情况。而一个接口可以扩展任意数量的接口。同样的，一个类只能直接继承自一个父类，却可以同时接上多
@@ -77,12 +76,17 @@ public class SubClass extends SuperClass implements Interface1, Interface2, ...
 小练习
 -----
 1. Which statement about abstract classes and interfaces is false?
+
 (A) An interface cannot implement any non-default instance methods, whereas
 an abstract class can.
+
 (B) A class can implement many interfaces but can have only one superclass.
+
 (C) An unlimited number of unrelated classes can implement the same interface.
+
 (D) It is not possible to construct either an abstract class object or an interface
 object.
+
 (E) All of the methods in both an abstract class and an interface are public.
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E</cr>

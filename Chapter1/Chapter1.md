@@ -95,7 +95,6 @@ public class car {
    public void setSpeed(double newSpeed) { // 定义了一个方法
      speed = newSpeed; // 操作这个属性
    }
-
    public static void main(String[] args) { // main是整个Java程序的入口
    }
 }
@@ -129,7 +128,6 @@ public class car {
    public void addFuel(double fuelValue) { // 定义了一个方法
      fuel += fuelValue; // 操作这个属性
    }
-
    public static void main(String[] args) { // main是整个Java程序的入口
      car myCar = new car(); // 生成了一个car实例
      myCar.addFuel(90); // 调用这个方法

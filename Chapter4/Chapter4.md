@@ -159,7 +159,7 @@ instanceof关键字
 
 例如：
 ```java
-  
+
 public class Vehicle {   
 
 }  
@@ -181,7 +181,7 @@ public class Bicycle extends Vehicle{
 
 方法重写带来的好处是：我们能够定义特定于子类类型的行为，这意味着子类可以根据其各自的特殊要求，来实现父类方法，而无需修改父类代码。
 
-重写的方法具有与父类的方法相同的名称，参数的数量和类型，以及返回类型与其覆盖的方法相同。 
+重写的方法具有与父类的方法相同的名称，参数的数量和类型，以及返回类型与其覆盖的方法相同。
 
 请看如下两个类。第一个类是动物类，包含着一个实例方法，以及一个静态方法（类方法）。第二个类是第一个类（动物类）的子类：猫类。
 
@@ -223,7 +223,7 @@ public class Cat extends Animal {
 ```
 Cat类覆盖Animal类中的实例方法并隐藏Animal中的静态方法。 此类中的主要方法创建Cat的一个实例对象。
 
-然后，在Cat类的main()方法中调用了Cat类的静态方法:testClassMethod()，以及myAnimal这一个对象的实例方法:testInstanceMethod()。 
+然后，在Cat类的main()方法中调用了Cat类的静态方法:testClassMethod()，以及myAnimal这一个对象的实例方法:testInstanceMethod()。
 
 
 注意，被调用的实例方法testInstanceMethod()是被子类重写出来的那一个，而被调用的静态方法，则取决于调用这个方法的类是父类还是子类；在这一个例子中，是Animal类的，而不是Cat类中的。
@@ -247,8 +247,7 @@ Cat.testClassMethod();
 
 来试试看！
 
-<lab lang="java" parameters="filename=Animal.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+```java
 public class Animal {
     public static void testClassMethod() {
         System.out.println("The static method in Animal");
@@ -264,7 +263,6 @@ public class Cat extends Animal {
     public void testInstanceMethod() {
         System.out.println("The instance method in Cat");
     }
-
     public static void main(String[] args) {
         Cat myCat = new Cat();
         Animal myAnimal = myCat;
@@ -272,7 +270,7 @@ public class Cat extends Animal {
         myAnimal.testInstanceMethod();
     }
 }
-</lab>
+```
 
 ```java
 class Human{
@@ -348,7 +346,6 @@ public abstract class Animal{
 public abstract class Animal{
     String name;
     String food;
-
     public abstract void eat();
     public abstract void roam();
 }
@@ -377,21 +374,29 @@ public class Dog extends Canine{
 
 `Dog`类就不是一个抽象类了，它是一个普通类。因此，在`Dog`类中，所有未具体实现的抽象方法，必须得到完全具体实现。在此，`Dog`类实现了`roam()`的抽象方法。如果在`Dog`类中再次实现`eat()`方法，则相当于我们上一节所的方法重写。
 
-在具体实现了这些方法后，我们就可以在`main()`方法中对它们进行调用了。在这个过程中，程序由`main()`方法开始执行，在`Dog`类中能找到的方法，如`roam()`，就直接调用，在`Dog`类中找不到的方法，则层层溯源，直到在父类中最终被找到。 
+在具体实现了这些方法后，我们就可以在`main()`方法中对它们进行调用了。在这个过程中，程序由`main()`方法开始执行，在`Dog`类中能找到的方法，如`roam()`，就直接调用，在`Dog`类中找不到的方法，则层层溯源，直到在父类中最终被找到。
 
 小练习
 -----
 Which of the following correctly implements the default constructor of the
 SavingsAccount class?
+
 I interestRate = 0;
 super();
+
 II super();
 interestRate = 0;
+
 III super();
-(A) II only
+
+(A) II
+
 (B) I and II only
+
 (C) II and III only
+
 (D) III only
+
 (E) I, II, and III
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>B</cr>
