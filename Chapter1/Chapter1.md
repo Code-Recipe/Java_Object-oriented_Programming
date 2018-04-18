@@ -1,4 +1,4 @@
-<notice>教程读者请不要直接阅读本文件，因为诸多功能在此无法正常使用，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)学习完整教程。如果您喜欢我们的教程，请在右上角给我们一个“Star”，谢谢您的支持！</notice>
+<notice>教程读者请不要直接阅读本文件，因为诸多功能在此无法正常使用，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)学习完整教程。如果您喜欢我们的教程，请在右上角给我们一个“Star”，谢谢您的支持！</notice>
 
 类和对象
 ======
@@ -89,7 +89,7 @@ setSpeed(getSpeed() + 10); // 把当前的速度加上10作为参数给setSpeed
 比如下面这个精简版的car类就定义了一个属性fuel和一个方法addFuel（在main里没有做操作，因此什么也不会输出）：
 
 <lab lang="java" parameters="filename=car.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class car {
    double speed = 50; // 定义了一个属性
    public void setSpeed(double newSpeed) { // 定义了一个方法
@@ -122,7 +122,7 @@ car myCar = new car();
 如果要调用一个类里面的方法，或是要访问或修改一个类里面的属性，我们可以使用`.`操作符，例如我们可以用`myCar.fuel`来访问`myCar`对象的`fuel`，也可以用`myCar.addFuel(90)`来调用`myCar`对象的`addFuel`方法。
 
 <lab lang="java" parameters="filename=car.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class car {
    double fuel = 10; // 定义了一个属性
    public void addFuel(double fuelValue) { // 定义了一个方法
@@ -224,11 +224,11 @@ m = mins;
 s = secs;
 (E) Time = new Time(h, m, s);
 
-<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E</cr>
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Hello {
    public static void main(String[] args) {
      // 在这里添加你的代码

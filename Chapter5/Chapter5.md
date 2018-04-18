@@ -488,11 +488,11 @@ Multiple-Choice Questions on Inheritance and Polymorphism 153
 
 (E) ((SavingsAccount) c).addInterest();
 
-<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E, D, C</cr>
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E, D, C</cr>
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Hello {
    public static void main(String[] args) {
      // 在这里添加你的代码

@@ -1,4 +1,4 @@
-<notice>教程读者请不要直接阅读本文件，因为诸多功能在此无法正常使用，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)学习完整教程。如果您喜欢我们的教程，请在右上角给我们一个“Star”，谢谢您的支持！</notice>
+<notice>教程读者请不要直接阅读本文件，因为诸多功能在此无法正常使用，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)学习完整教程。如果您喜欢我们的教程，请在右上角给我们一个“Star”，谢谢您的支持！</notice>
 
 类进阶
 ======
@@ -13,7 +13,7 @@
 
 下面，让我们再来看一段Java代码，来看看在Java中，类、对象、方法三者的体现：
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog {
   String name;
   String sex;
@@ -105,7 +105,7 @@ public Dog(String name, String sex, int age){
 
 那这个构造器到底有什么用呢？请看下面这段代码：
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog {
     public Dog(String name, String sex, int age){
         System.out.println("My name is " + name + ", and my sex is " + sex + ". I'm " + age + " years old.");
@@ -149,7 +149,7 @@ public class Dog{
 ```
 来试试看编译运行结果吧！
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog{
     String name;
     public void setName(String inName){
@@ -207,7 +207,7 @@ public class cat {
 
 来试试看编译运行结果吧！
 <lab lang="java" parameters="filename=cat.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class cat {
     String name;
     String type;
@@ -287,12 +287,12 @@ temp, respectively?
 (D) 8, 6, ?, where ? means undefined
 (E) 8, 6, 8
 
-<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>C</cr>
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Hello {
    public static void main(String[] args) {
      // 在这里添加你的代码

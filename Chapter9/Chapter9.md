@@ -132,4 +132,4 @@ to form appropriate abstract operations
 (E) Writing the program in terms of the operations to be performed and then
 refining these operations by adding more detail
 
-<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>E, D, E</cr>
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E, D, E</cr>

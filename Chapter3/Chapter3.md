@@ -1,4 +1,4 @@
-<notice>教程读者请不要直接阅读本文件，因为诸多功能在此无法正常使用，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)学习完整教程。如果您喜欢我们的教程，请在右上角给我们一个“Star”，谢谢您的支持！</notice>
+<notice>教程读者请不要直接阅读本文件，因为诸多功能在此无法正常使用，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)学习完整教程。如果您喜欢我们的教程，请在右上角给我们一个“Star”，谢谢您的支持！</notice>
 
 引用
 ======
@@ -31,7 +31,7 @@ public class Hello {
 让我们再看看这个简写过的`Dog`类改编的小实验：
 
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog {
   int age;
   public void showInfo(){
@@ -56,7 +56,7 @@ public class Dog {
 在上一节我们说到，一个`new`操作符生成一个真的对象。那么如果我们在定义的时候没有初始化（也就是没有用`new`操作符新建对象）会怎样呢？
 
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog {
   int age;
   public void showInfo(){
@@ -71,7 +71,7 @@ public class Dog {
 那让我们试着调用一下它的方法：
 
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog {
   int age;
   public void showInfo(){
@@ -89,7 +89,7 @@ public class Dog {
 上面说的是我们在一个方法里定义`myPuppy`的情况，但如果在一个类里定义`myPuppy`，情况则完全不同，例如每一个`Dog`对象都会有一个`son`属性，这个`son`直接定义在类的内部，如下所示：
 
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog {
   int age;
   Dog son;
@@ -109,7 +109,7 @@ public class Dog {
 运行的时候抛出`java.lang.NullPointerException`固然很吓人，除了用`catch`来接住这个异常以外，我们还可以在异常发生前通过判断是不是`null`来避免使用到值为`null`的变量：
 
 <lab lang="java" parameters="filename=Dog.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Dog {
   int age;
   public void showInfo(){
@@ -133,7 +133,7 @@ public class Dog {
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/1)查看。</notice>
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Hello {
    public static void main(String[] args) {
      // 在这里添加你的代码
