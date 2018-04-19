@@ -265,19 +265,33 @@ this关键字除了可以引用变量或者构造方法之外，还有一个重�
 
 小练习
 -----
-1.Which of the following represents correct implementation code for the constructor
-with parameters?
-(A) hrs = 0;
+1.Which of the following represents correct implementation code for the constructor with parameters?
+(A) 
+```java
+hrs = 0;
 mins = 0;
 secs = 0;
-(B) hrs = h;
+```
+(B) 
+```java
+hrs = h;
 mins = m;
 secs = s;
-(C) resetTime(hrs, mins, secs);
-(D) h = hrs;
+```
+(C)
+```java
+resetTime(hrs, mins, secs);
+```
+(D)
+```java
+h = hrs;
 m = mins;
 s = secs;
-(E) Time = new Time(h, m, s);
+```
+(E)
+```java
+Time = new Time(h, m, s);
+```
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
 
