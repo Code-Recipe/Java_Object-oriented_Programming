@@ -266,6 +266,8 @@ this关键字除了可以引用变量或者构造方法之外，还有一个重�
 小练习
 -----
 1.Which of the following represents correct implementation code for the constructor with parameters?
+
+
 (A) 
 ```java
 hrs = 0;
@@ -295,6 +297,7 @@ Time = new Time(h, m, s);
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
 
+### 实验室
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>

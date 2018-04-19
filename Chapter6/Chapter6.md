@@ -90,6 +90,7 @@ object.
 (E) All of the methods in both an abstract class and an interface are public.
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
+### 实验室
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">

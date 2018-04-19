@@ -114,6 +114,7 @@ What will be output as a result of running the fragment?
 (E) nine
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>A</cr>
+### 实验室
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">

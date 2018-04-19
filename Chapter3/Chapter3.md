@@ -130,7 +130,7 @@ public class Dog {
 
 小练习
 -----
-
+### 实验室
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>

@@ -260,37 +260,46 @@ public E put(Location loc, E obj) { // 这是方法定义
 小练习
 -----
 ```java
-public class Tester
-{
-public void someMethod(int a, int b)
-{
-int temp = a;
-a = b;
-b = temp;
+public class Tester {
+    public void someMethod(int a, int b){
+     int temp = a;
+     a = b;
+     b = temp;
+  }
 }
-}
-public class TesterMain
-{
-public static void main(String[] args)
-{
-int x = 6, y = 8;
-Tester tester = new Tester();
-tester.someMethod(x, y);
-}
+
+public class TesterMain{
+    public static void main(String[] args){
+     int x = 6, y = 8;
+     Tester tester = new Tester();
+     tester.someMethod(x, y);
+  }
 }
 ```
 Just before the end of execution of this program, what are the values of x, y, and
 temp, respectively?
+
+
 (A) 6, 8, 6
+
+
 (B) 8, 6, 6
+
+
 (C) 6, 8, ?, where ? means undefined
+
+
 (D) 8, 6, ?, where ? means undefined
+
+
 (E) 8, 6, 8
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
 
-在这里练习吧：
+###  实验室
+
+
 <lab lang="java" parameters="filename=Hello.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Hello {

@@ -489,6 +489,7 @@ Multiple-Choice Questions on Inheritance and Polymorphism 153
 (E) ((SavingsAccount) c).addInterest();
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E, D, C</cr>
+### 实验室
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
