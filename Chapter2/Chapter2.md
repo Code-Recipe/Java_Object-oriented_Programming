@@ -147,6 +147,34 @@ public class Dog{
     }
 }
 ```
+
+我们在前一章节学到了`this`关键字。我们知道，如果在某个变量前面加上一个`this`关键字，其指的就是这个对象的成员变量或者方法，而不是指成员方法的形式参数或者局部变量。简单地说，当出现了一个局部变量与一个全局变量都使用了同一个名字时，`this`关键字将指明其紧跟的变量为全局变量，而非局部变量，避免混淆。
+
+因此，我们的更改器(Mutator)和访问器(Accessor)还可以这么写：
+```java
+public class Dog{
+    String name;
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName( ){
+        System.out.println("Dog name is: " + name );
+        return name;
+    }
+    public static void main(String []args){
+        /* 创建对象 */
+        Dog myDog = new Dog();
+        /* 通过方法来设定name */
+        myDog.setName("myPuppy");
+        /* 调用另一个方法获取name */
+        myDog.getName();
+        /*你也可以像下面这样访问成员变量 */
+        System.out.println("name值 : " + myDog.getName() );
+    }
+}
+```
+
+
 来试试看编译运行结果吧！
 <lab lang="java" parameters="filename=Dog.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
@@ -155,6 +183,10 @@ public class Dog{
     public void setName(String inName){
         name = inName;
     }
+    //或者你也可以这样写：
+    //public void setName(String name){
+    //    this.name = name;
+    //}
     public String getName( ){
         System.out.println("Dog name is: " + name );
         return name;
@@ -297,7 +329,7 @@ temp, respectively?
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
 
-###  实验室
+### 实验室
 
 
 <lab lang="java" parameters="filename=Hello.java">
