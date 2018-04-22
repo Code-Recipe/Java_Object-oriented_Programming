@@ -95,7 +95,7 @@
       "name": "程序分析与设计",
       "content": "Chapter9/Chapter9.md",
       "sections": [
-        {"name":"瀑布模型"},
+        {"name":"瀑布模型(The waterfall Model)"},
         {"name":"面向对象程序设计"},
         {"name":"小练习"}
       ]
