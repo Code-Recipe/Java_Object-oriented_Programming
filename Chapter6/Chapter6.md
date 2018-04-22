@@ -36,7 +36,7 @@ public interface SwimmingObject
 ```java
 public interface ExampleInterface extends Interface1, Interface2, Interface3
 ```
-实现接口
+使用接口
 -----
 我们已经学会了如何定义接口，那么，我们如何让类去使用已经定义好的接口，或者说，我们如何把类"接上"这些接口呢？答案是：使用`implement`关键字。例如：
 
