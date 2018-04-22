@@ -148,9 +148,9 @@ public class Dog{
 }
 ```
 
-我们在前一章节学到了`this`关键字。我们知道，如果在某个变量前面加上一个`this`关键字，其指的就是这个对象的成员变量或者方法，而不是指成员方法的形式参数或者局部变量。简单地说，当出现了一个局部变量与一个全局变量都使用了同一个名字时，`this`关键字将指明其紧跟的变量为全局变量，而非局部变量，避免混淆。
+我们在前一章节学到了`this`关键字。我们知道，如果在某个变量前面加上一个`this`关键字，其指的就是这个对象的成员变量或者方法，而不是指成员方法的形式参数或者局部变量。简单地说，当出现了一个局部变量与一个全局变量都使用了同一个名字时，`this`关键字将指明其紧跟的变量为全局变量，而非局部变量，避免混淆。
 
-因此，我们的更改器(Mutator)和访问器(Accessor)还可以这么写：
+因此，我们的更改器和访问器还可以这么写：
 ```java
 public class Dog{
     String name;
@@ -274,7 +274,7 @@ public class cat {
 
 Javadoc注释
 -----
-注释我们已经在Java入门教程里面说过了，其目的主要是为了让读代码的人知道代码的用途。在Java里有一种特殊的注释——Javadoc注释，是用来描述一个方法的信息，一般放在方法定义前。
+注释我们已经在[Java入门教程的“注释”一节](https://coderecipe.cn/learn/2#section-%E6%B3%A8%E9%87%8A)里面说过了，其目的主要是为了让读代码的人知道代码的用途。在Java里有一种特殊的注释——Javadoc注释，是用来描述一个方法的信息，一般放在方法定义前。
 ```java
 /** Puts obj at location loc in this grid, and returns
 * the object previously at this location.
@@ -287,7 +287,7 @@ Javadoc注释
 public E put(Location loc, E obj) { // 这是方法定义
 ...
 ```
-首先最前面的部分是这个方法功能和用法的文字描述，之后的`@param`代表这后面的是描述参数的，`loc`和`obj`是参数名，之后的是参数说明。`@return`是对返回值的说明，`@throws NullPointerException`代表可能抛出`NullPointerException`，后面是抛出的条件。
+首先最前面的部分是这个方法功能和用法的文字描述，之后的`@param`代表这后面的是描述参数的，`loc`和`obj`是参数名，之后的是参数说明。`@return`是对返回值的说明，`@throws NullPointerException`代表可能抛出`NullPointerException`，后面是抛出的条件。`Precondition`指的是函数运行之前需要有的条件。而`Postcondition`（这个函数没有用到）指的是函数运行之后的状态，也就是函数的效果。
 
 小练习
 -----
