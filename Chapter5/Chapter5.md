@@ -258,9 +258,7 @@ bike03 = new RoadBike(40, 20, 8, 23);
 类型转换
 -----
 
-在AP CS A中，我们只需要掌握
-**向下转型（Downcasting）**
-的概念。
+在AP CS A中，我们只需要掌握 **向下转型（downcasting）** 的概念。
 
 
 考虑如下代码：
