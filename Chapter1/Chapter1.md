@@ -336,16 +336,7 @@ III. public void one (int first, int second, int third)
 
 (E) I, II, and III
 
-### 实验室
-在这里练习吧：
-<lab lang="java" parameters="filename=Hello.java">
-<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
-public class Hello {
-   public static void main(String[] args) {
-     // 在这里添加你的代码
-   }
-}
-</lab>
+
 
 3. Consider the following class declaration.
 
@@ -382,8 +373,24 @@ The following code segment appears in another class.
 ```
 
 What is printed as a result of executing the code segment ?
+
 (A) 5900.0  8000.0  5900.0
+
 (B) 6000.0  7800.0  6100.0
+
 (C) 6000.0  8000.0  6000.0
+
 (D) 6000.0  7800.0  6000.0
+
 (E) 5900.0  8000.0  6000.0
+
+### 实验室
+在这里练习吧：
+<lab lang="java" parameters="filename=Hello.java">
+<notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
+public class Hello {
+   public static void main(String[] args) {
+     // 在这里添加你的代码
+   }
+}
+</lab>

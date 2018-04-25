@@ -174,9 +174,13 @@ C) 10 11 13 13 14
 D) Nothing is printed due to infinite loop.
 
 E) Nothing is printed.
-```
+
+
+
+
 ### 实验室
-在这里练习吧：
+
+
 <lab lang="java" parameters="filename=Hello.java">
 <notice>练习环境在此无法显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>
 public class Hello {
