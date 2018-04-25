@@ -448,7 +448,7 @@ BankAccount s = new SavingsAccount(1000, 0.04);
 
 BankAccount c = new CheckingAccount(500);
 
-1. Which method call will cause an error?
+1.Which method call will cause an error?
 
 (A) b.deposit(200);
 
@@ -460,7 +460,7 @@ BankAccount c = new CheckingAccount(500);
 
 (E) s.addInterest();
 
-2. In order to test polymorphism, which method must be used in the program?
+2.In order to test polymorphism, which method must be used in the program?
 
 (A) Either a SavingsAccount constructor or a CheckingAccount constructor
 
@@ -474,7 +474,7 @@ BankAccount c = new CheckingAccount(500);
 
 Multiple-Choice Questions on Inheritance and Polymorphism 153
 
-3. Which of the following will not cause a ClassCastException to be thrown?
+3.Which of the following will not cause a ClassCastException to be thrown?
 
 (A) ((SavingsAccount) b).addInterest();
 

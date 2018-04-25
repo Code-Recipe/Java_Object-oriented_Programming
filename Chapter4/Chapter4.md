@@ -401,7 +401,7 @@ III super();
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>B</cr>
 
-2.【2014年AP CS第22题]
+2.【2014年AP CS第22题】
 
 Consider the following Book and AudioBook classes.
 

@@ -131,7 +131,7 @@ public class Dog {
 小练习
 -----
 
-1. Consider the following class declaration.
+1.Consider the following class declaration.
 
 ```java
 public class Employee {
@@ -152,7 +152,7 @@ public class Employee {
 }
 ```
 
-2. Consider the following codes segment.
+2.Consider the following codes segment.
 
 ```java
 	int k = 1;

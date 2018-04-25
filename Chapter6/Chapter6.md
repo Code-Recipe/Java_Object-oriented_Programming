@@ -75,7 +75,7 @@ public class SubClass extends SuperClass implements Interface1, Interface2, ...
 
 小练习
 -----
-1. Which statement about abstract classes and interfaces is false?
+1.Which statement about abstract classes and interfaces is false?
 
 (A) An interface cannot implement any non-default instance methods, whereas
 an abstract class can.

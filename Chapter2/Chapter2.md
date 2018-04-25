@@ -330,7 +330,7 @@ temp, respectively?
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
-2. Consider the following code segment.
+   2.Consider the following code segment.
 
 ```java
 public class Person
@@ -370,8 +370,7 @@ Which of the following statements is the most appropriate for changing the name 
 
 (E) Person.setName("Tom");
 
-
-3. Consider the following class declaration.
+3.Consider the following class declaration.
 
 ```java
 public class Student
@@ -407,7 +406,7 @@ III.Student c = new Student("Juan", "15");
 
 (E) I, II, and III
 
-4. Consider the following method.
+4.Consider the following method.
 
 ```java
 public String mystery(String input)
