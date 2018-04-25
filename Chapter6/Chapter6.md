@@ -90,6 +90,132 @@ object.
 (E) All of the methods in both an abstract class and an interface are public.
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
+
+2.【2014年AP CS 第14题】Consider the following interface and class declarations.
+
+```java
+public interface Vehicle
+{
+/** ©return the mileage traveled by this Vehicle */
+double getMileage();
+}
+public class Fleet
+{
+private ArrayList<Vehicle> myVehicles;
+/** ©return the mileage traveled by all vehicles in this Fleet
+*/
+public double getTotalMileage()
+{
+double sum = 0.0;
+for (Vehicle v : myVehicles)
+{
+sum += /* expression */ ;
+}
+return sum;
+}
+/ / There may be instance variables, constructors, and methods that are not shown.
+```
+
+Which of the following can be used to replace /* expression */ so that getTotalMileage returns the total of the miles traveled for all vehicles in the fleet?
+
+(A) getMileage(v)
+
+(B) myVehicles[v].getMileage()
+
+(C) Vehicle.get(v).getMileage()
+
+(D) myVehicles.get(v) .getMileage()
+
+(E) v.getMileage()
+
+3.【2014年AP CS第25题】
+A rectangular box fits inside another rectangular box if and only if the height, width, and depth of the smaller box are each less than the corresponding values of the larger box. Consider the following three interface declarations that are intended to represent information necessary for rectangular boxes.
+
+I.
+```java
+public interface RBox
+{
+/ * * ©return the height of this RBox * / double getHeight();
+/** ©return the width of this RBox */ double getWidthO;
+/** ©return the depth of this RBox */ double getDepthO;
+}
+```
+
+II.
+```java
+public interface RBox
+{
+/ * * ©return true if the height of this RBox is less than the height of other;
+* false otherwise
+*/
+boolean smallerHeight(RBox other);
+/** ©return true if the width of this RBox is less than the width of other;
+* false otherwise
+*/
+boolean smallerWidth(RBox other);
+/ * * ©return true if the depth of this RBox is less than the depth of other;
+* false otherwise
+*/
+boolean smallerDepth(RBox other);
+}
+```
+
+III.
+```java
+public interface RBox
+{
+/ * * ©return the surface area of this RBox * / double getSurfaceArea();
+/ * * ©return the volume of this RBox * / double getVolume();
+}
+```
+
+Which of the interfaces, if correctly implemented by a Box class, would be sufficient functionality for a user of the Box class to determine if one Box can fit inside another?
+
+(A) I only
+
+(B) II only
+
+(C) III only
+
+(D) I and II only
+
+(E) I, II, and III
+
+4.【2015年AP CS第33题】
+
+Which of the following statements regarding interfaces is FALSE?
+
+(A) All methods in an interface are public.
+
+(B) An interface cannot be instantiated.
+
+(C) An interface can declare an instance variable.
+
+(D) A non-abstract class can implement an interface.
+
+(E) An abstract class can implement an interface.
+
+5.【2015年AP CS第10题】
+Consider the following interface and class declarations.
+
+```java
+public interface Student { / * implementation not shown * / }
+public class Athlete { / * implementation not shown * / }
+public class TennisPlayer extends Athlete implements Student { / * implementation not shown * / }
+```
+
+Assume that each class has a zero-parameter constructor. Which of the following is NOT a valid declaration?
+
+(A) Student a = new TennisPlayer();
+
+(B) TennisPlayer b = new TennisPlayer();
+
+(C) Athlete c = new TennisPlayer();
+
+(D) Student d = new Athlete();
+
+(E) Athlete e = new Athlete();
+
 ### 实验室
 
 在这里练习吧：

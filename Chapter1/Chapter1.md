@@ -296,6 +296,46 @@ Time = new Time(h, m, s);
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
 
+2.【2015年AP CS第24题】Consider the following class.
+
+```java
+public class SomeMethods
+{
+  public void one(int first)
+  { / * implementation not shown * / }
+
+  public void one(int first, int second)
+  { / * implementation not shown * / }
+
+  public void one(int first, String second)
+  { / * implementation not shown * / }
+}
+```
+
+Which of the following methods can be added to the SomeMethods class without causing a compile-time error?
+
+I. public void one (int value)
+
+{ / * implementation not shown * / }
+
+II.public void one (String first, int second)
+
+{ / * implementation not shown * / }
+
+III. public void one (int first, int second, int third)
+
+{ / * implementation not shown * / }
+
+(A) I only
+
+(B) I and II only
+
+(C) I and III only
+
+(D) II and III only
+
+(E) I, II, and III
+
 ### 实验室
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">
@@ -306,3 +346,44 @@ public class Hello {
    }
 }
 </lab>
+
+3. Consider the following class declaration.
+
+```java
+public class Employee {
+
+	private double salary;
+	
+	public Employee(int s) {
+		salary = s;
+	}
+	
+	public void increaseSalary(double num) {
+		salary = salary + num;
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+}
+```
+
+The following code segment appears in another class.
+
+```java
+    Employee one = new Employee(6000);
+		Employee two = new Employee(8000);
+		Employee three = one;
+		three.increaseSalary(100);
+		one.increaseSalary(-200);
+		
+		System.out.println(one.getSalary() + "  " + two.getSalary() + "  " + 
+                         three.getSalary());
+```
+
+What is printed as a result of executing the code segment ?
+(A) 5900.0  8000.0  5900.0
+(B) 6000.0  7800.0  6100.0
+(C) 6000.0  8000.0  6000.0
+(D) 6000.0  7800.0  6000.0
+(E) 5900.0  8000.0  6000.0

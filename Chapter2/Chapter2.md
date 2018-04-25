@@ -291,6 +291,8 @@ public E put(Location loc, E obj) { // 这是方法定义
 
 小练习
 -----
+1. Consider the following code segment.
+
 ```java
 public class Tester {
     public void someMethod(int a, int b){
@@ -328,7 +330,110 @@ temp, respectively?
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
+2. Consider the following code segment.
 
+```java
+public class Person
+{
+  private String myName; 
+  private int myYearOfBirth;
+  public Person(String name, int yearOfBirth)
+  {
+    myName = name;
+    myYearOfBirth = yearOfBirth;
+  }
+
+  public String getName()
+  { return myName; }
+
+  public void setName(String name)
+  { myName = name; }
+//There may be instance variables, constructors, and methods that are not shown.
+}
+```
+
+Assume that the following declaration has been made.
+
+```java
+Person student = new Person("Thomas", 1995);
+```
+
+Which of the following statements is the most appropriate for changing the name of student from "Thomas" to "Tom" ?
+
+(A) student = new Person("Tom", 1995);
+
+(B) student.myName = "Tom";
+
+(C) student.getName("Tom");
+
+(D) student.setName("Tom");
+
+(E) Person.setName("Tom");
+
+
+3. Consider the following class declaration.
+
+```java
+public class Student
+{
+  private String myName; 
+  private int myAge;
+
+  public Student())
+  { /* implementation not shown */ }
+
+  public Student(String name, int age)
+  { /* implementation not shown */ }
+
+  // No other constructors
+}
+```
+
+Which of the following declarations will compile without error?
+
+I.Student a = new Student();
+
+II.Student b = new Student("Juan", 15);
+
+III.Student c = new Student("Juan", "15");
+
+(A) I only
+
+(B) II only
+
+(C) I and II only
+
+(D) I and III only
+
+(E) I, II, and III
+
+4. Consider the following method.
+
+```java
+public String mystery(String input)
+{
+  String output = "";
+
+  for (int k = 1; k < input.length(); k = k + 2)
+  {
+    output += input.substring(k, k + 1);
+  }
+
+  return output;
+}
+```
+
+What is returned as a result of the call mystery (" computer") ?
+
+(A) "computer"
+
+(B) "cmue"
+
+(C) "optr"
+
+(D) "ompute"
+
+(E) Nothing is returned because an IndexOutOfBoundsException is thrown.
 ### 实验室
 
 

@@ -130,6 +130,51 @@ public class Dog {
 
 小练习
 -----
+
+1. Consider the following class declaration.
+
+```java
+public class Employee {
+
+	private double salary;
+	
+	public Employee(int s) {
+		salary = s;
+	}
+	
+	public void increaseSalary(double num) {
+		salary = salary + num;
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+}
+```
+
+2. Consider the following codes segment.
+
+```java
+	int k = 1;
+	int n = 10;
+	while((k > 15) && (n > k)) {
+		n += k;
+		System.out.println(n + "  ");
+	}
+```
+
+What is printed as a result of executing the code segment?
+
+A) 11 12 13 14
+
+B) 11 12 13 14 15
+
+C) 10 11 13 13 14
+
+D) Nothing is printed due to infinite loop.
+
+E) Nothing is printed.
+```
 ### 实验室
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">

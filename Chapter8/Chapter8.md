@@ -266,11 +266,13 @@ if (s == t) ...
 
 小练习
 -----
-Refer to these declarations:
+1.Refer to these declarations:
+
 ```java
 Integer k = new Integer(8);
 Integer m = new Integer(4);
 ```
+
 Which test will not generate an error?
 
 I if (k.intValue() == m.intValue())...
@@ -288,6 +290,75 @@ III if ((k.toString()).equals(m.toString()))...
 (D) I and III only
 
 (E) I, II, and III
+
+2.Consider the following method.
+
+```java
+public static boolean mystery(String str)
+{
+String temp = "";
+for (int k = str.length(); k > 0; k--)
+{
+temp = temp + str.substring(k - 1, k);
+}
+return temp.equals(str);
+}
+```
+
+Which of the following calls to mystery will return true?
+
+(A) mystery("no")
+
+(B) mystery("on")
+
+(C) mystery("nnoo")
+
+(D) mystery("nono")
+
+(E) mystery("noon")
+
+3.Consider the following recursive method.
+
+```java
+public static void whatsltDo(String str)
+{
+int len = str.length(); if (len > 1)
+{
+String temp = str.substring(0, len - 1); System.out.printIn(temp); whatsltDo(temp);
+}
+}
+```
+
+What is printed as a result of the call whatsltDo ("WATCH") ?
+
+(A) H
+
+(B) WATC
+
+(C) ATCH
+
+    ATC
+
+    AT
+
+    A
+
+(D) WATC
+
+    WAT
+
+    WA
+
+    W
+
+(E) WATCH
+
+    WATC 
+
+    WAT
+     
+    WA
+
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
 ### 实验室

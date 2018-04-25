@@ -378,7 +378,7 @@ public class Dog extends Canine{
 
 小练习
 -----
-Which of the following correctly implements the default constructor of the
+1.Which of the following correctly implements the default constructor of the
 SavingsAccount class?
 
 I interestRate = 0;
@@ -398,6 +398,83 @@ III super();
 (D) III only
 
 (E) I, II, and III
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>B</cr>
+
+2.【2014年AP CS第22题]
+
+Consider the following Book and AudioBook classes.
+
+```java
+public class Book
+{
+  private int numPages;
+  private String bookTitle;
+
+  public Book(int pages. String title)
+  {
+  numPages = pages;
+  bookTitle = title;
+  }
+
+  public String toStringO
+  {
+    return bookTitle + " " + numPages;
+  }
+
+  public int length()
+  {
+    return numPages;
+  }
+}
+
+
+public class AudioBook extends Book
+{
+  private int numMinutes;
+  public AudioBook(int minutes, int pages. String title)
+  {
+    super(pages, title); numMinutes = minutes;
+  }
+
+  public int length()
+  {
+    return numMinutes;
+  }
+
+  public double pagesPerMinute()
+  {
+    return ((double) super.length()) / numMinutes;
+  }
+}
+```
+
+Consider the following code segment that appears in a class other than Book or AudioBook.
+
+```java
+Line1: Book[] books = new Book[2];
+Line2: books[0] = new AudioBook(100, 300, "the "Jungle");
+Line3: books[1] = new Book(400, "Captains Courageous");
+Line4: System.out.println(books[0].pagesPerMinute());
+Line5: System.out.println(books[0].toString());
+Line6: System.out.println(books[0].length());
+Line7: System.out.println(books[1].toString());
+```
+
+Which of the following best explains why the code segment will not compile?
+
+(A) Line 2 will not compile because variables of type Book may not refer to variables of type AudioBook
+
+(B) Line 4 will not compile because variables of type Book may only call methods in the Book cl
+
+(C) Line 5 will not compile because the AudioBook class does not have a method named toString declared or implemented.
+
+(D) Line 6 will not compile because the statement is ambiguous. The compiler cannot determine which
+length method should be called.
+
+(E) Line 7 will not compile because the element at index 1 in the array named books may not have been
+initialized.
+
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>B</cr>
 
