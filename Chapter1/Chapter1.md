@@ -336,7 +336,7 @@ III. public void one (int first, int second, int third)
 
 (E) I, II, and III
 
-
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
 
 3. Consider the following class declaration.
 
@@ -383,6 +383,8 @@ What is printed as a result of executing the code segment ?
 (D) 6000.0  7800.0  6000.0
 
 (E) 5900.0  8000.0  6000.0
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
 ### 实验室
 在这里练习吧：
