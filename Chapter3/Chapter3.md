@@ -131,7 +131,7 @@ public class Dog {
 小练习
 -----
 
-1.Consider the following class declaration.
+1.思考一下，看看你能不能完全理解下面这段代码的意义与结构。
 
 ```java
 public class Employee {
@@ -175,7 +175,7 @@ D) Nothing is printed due to infinite loop.
 
 E) Nothing is printed.
 
-
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
 
 
 ### 实验室

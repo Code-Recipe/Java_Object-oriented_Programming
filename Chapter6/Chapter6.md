@@ -128,6 +128,8 @@ Which of the following can be used to replace /* expression */ so that getTotalM
 
 (E) v.getMileage()
 
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
+
 3.【2014年AP CS第25题】
 A rectangular box fits inside another rectangular box if and only if the height, width, and depth of the smaller box are each less than the corresponding values of the larger box. Consider the following three interface declarations that are intended to represent information necessary for rectangular boxes.
 
@@ -181,6 +183,8 @@ Which of the interfaces, if correctly implemented by a Box class, would be suffi
 
 (E) I, II, and III
 
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
+
 4.【2015年AP CS第33题】
 
 Which of the following statements regarding interfaces is FALSE?
@@ -194,6 +198,8 @@ Which of the following statements regarding interfaces is FALSE?
 (D) A non-abstract class can implement an interface.
 
 (E) An abstract class can implement an interface.
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
 5.【2015年AP CS第10题】
 Consider the following interface and class declarations.
@@ -216,7 +222,7 @@ Assume that each class has a zero-parameter constructor. Which of the following 
 
 (E) Athlete e = new Athlete();
 
-### 实验室
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>### 实验室
 
 在这里练习吧：
 <lab lang="java" parameters="filename=Hello.java">

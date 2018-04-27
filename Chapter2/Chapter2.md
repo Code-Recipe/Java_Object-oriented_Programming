@@ -370,6 +370,8 @@ Which of the following statements is the most appropriate for changing the name 
 
 (E) Person.setName("Tom");
 
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
+
 3.Consider the following class declaration.
 
 ```java
@@ -406,6 +408,8 @@ III.Student c = new Student("Juan", "15");
 
 (E) I, II, and III
 
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
+
 4.Consider the following method.
 
 ```java
@@ -422,7 +426,7 @@ public String mystery(String input)
 }
 ```
 
-What is returned as a result of the call mystery (" computer") ?
+What is returned as a result of the call mystery ("computer") ?
 
 (A) "computer"
 
@@ -433,6 +437,8 @@ What is returned as a result of the call mystery (" computer") ?
 (D) "ompute"
 
 (E) Nothing is returned because an IndexOutOfBoundsException is thrown.
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
 
 ### 实验室
 

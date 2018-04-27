@@ -291,7 +291,9 @@ III if ((k.toString()).equals(m.toString()))...
 
 (E) I, II, and III
 
-2.Consider the following method.
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>B</cr>
+
+2.【2015年AP CS第11题】Consider the following method.
 
 ```java
 public static boolean mystery(String str)
@@ -317,15 +319,22 @@ Which of the following calls to mystery will return true?
 
 (E) mystery("noon")
 
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>E</cr>
+
+
 3.Consider the following recursive method.
 
 ```java
 public static void whatsltDo(String str)
 {
-int len = str.length(); if (len > 1)
-{
-String temp = str.substring(0, len - 1); System.out.printIn(temp); whatsltDo(temp);
-}
+int len = str.length(); 
+
+if (len > 1)
+  {
+   String temp = str.substring(0, len - 1); 
+   System.out.printIn(temp); 
+   whatsltDo(temp);
+  }
 }
 ```
 
