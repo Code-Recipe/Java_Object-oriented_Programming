@@ -437,18 +437,175 @@ super(parameter1, parameter2, ...);
 ```
 则父类中具有匹配的传入参数列表的构造函数将会被调用。
 
+**注意：**Java里有一个特殊要求，就是我们在构造器里面调用`super()`的时候，`super()`必须要**在构造器里的第一行**。比如这个类里面的构造器是可以编译的：
+```java
+public class SavingsAccount extends BankAccount {
+    private double interestRate;
+    public SavingsAccount() {
+        super();
+        interestRate = 0;
+    }
+}
+```
+而这个类里的构造器不行：
+```java
+public class SavingsAccount extends BankAccount {
+    private double interestRate;
+    public SavingsAccount() {
+        interestRate = 0;
+        super();
+    }
+}
+```
+
 小练习
 -----
+**Answering question 1 requires you to read the following code:**
+```java
+public class BankAccount {
+    private double balance;
+    public BankAccount() {
+        balance = 0;
+    }
+    public BankAccount(double acctBalance) {
+        balance = acctBalance;
+    }
+    public void deposit(double amount) {
+        balance += amount;
+    }
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+public class SavingsAccount extends BankAccount {
+    private double interestRate;
+    public SavingsAccount() {
+        /* implementation not shown */
+    }
+    public SavingsAccount(double acctBalance, double rate) {
+        /* implementation not shown */
+    }
+    public void addInterest() //Add interest to balance
+    {
+        /* implementation not shown */
+    }
+}
+```
+1.Which of the following correctly implements the default constructor of the `SavingsAccount` class?
+
+I interestRate = 0;
+super();
+
+II super();
+interestRate = 0;
+
+III super();
+
+(A) II
+
+(B) I and II only
+
+(C) II and III only
+
+(D) III only
+
+(E) I, II, and III
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C
+
+解析：这道题的考点是一个特殊情况，就是`super()`无论如何要在构造器的第一行，因此I是不行的，III看起来不行（没有初始化`interestRate`），但实际上，因为`interestRate`是一个`double`类型的变量，它会有默认值`0.0`，因此不初始化也可以的（如果这个变量是引用类型，这个变量的值就会是`null`）。</cr>
+
+2.【2014年AP CS第22题】
+
+Consider the following Book and AudioBook classes.
+
+```java
+public class Book
+{
+  private int numPages;
+  private String bookTitle;
+
+  public Book(int pages. String title)
+  {
+  numPages = pages;
+  bookTitle = title;
+  }
+
+  public String toStringO
+  {
+    return bookTitle + " " + numPages;
+  }
+
+  public int length()
+  {
+    return numPages;
+  }
+}
+
+
+public class AudioBook extends Book
+{
+  private int numMinutes;
+  public AudioBook(int minutes, int pages. String title)
+  {
+    super(pages, title); numMinutes = minutes;
+  }
+
+  public int length()
+  {
+    return numMinutes;
+  }
+
+  public double pagesPerMinute()
+  {
+    return ((double) super.length()) / numMinutes;
+  }
+}
+```
+
+Consider the following code segment that appears in a class other than Book or AudioBook.
+
+```java
+Line1: Book[] books = new Book[2];
+Line2: books[0] = new AudioBook(100, 300, "the Jungle");
+Line3: books[1] = new Book(400, "Captains Courageous");
+Line4: System.out.println(books[0].pagesPerMinute());
+Line5: System.out.println(books[0].toString());
+Line6: System.out.println(books[0].length());
+Line7: System.out.println(books[1].toString());
+```
+
+Which of the following best explains why the code segment will not compile?
+
+(A) Line 2 will not compile because variables of type Book may not refer to variables of type AudioBook
+
+(B) Line 4 will not compile because variables of type Book may only call methods in the Book cl
+
+(C) Line 5 will not compile because the AudioBook class does not have a method named toString declared or implemented.
+
+(D) Line 6 will not compile because the statement is ambiguous. The compiler cannot determine which
+length method should be called.
+
+(E) Line 7 will not compile because the element at index 1 in the array named books may not have been
+initialized.
+
+
+<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>B</cr>
+
 A program to test the BankAccount, SavingsAccount, and CheckingAccount classes has
 these declarations:
-
+```java
 BankAccount b = new BankAccount(1400);
 
 BankAccount s = new SavingsAccount(1000, 0.04);
 
 BankAccount c = new CheckingAccount(500);
+```
 
-1.Which method call will cause an error?
+3.Which method call will cause an error?
 
 (A) b.deposit(200);
 
@@ -460,7 +617,7 @@ BankAccount c = new CheckingAccount(500);
 
 (E) s.addInterest();
 
-2.In order to test polymorphism, which method must be used in the program?
+4.In order to test polymorphism, which method must be used in the program?
 
 (A) Either a SavingsAccount constructor or a CheckingAccount constructor
 
@@ -474,7 +631,7 @@ BankAccount c = new CheckingAccount(500);
 
 Multiple-Choice Questions on Inheritance and Polymorphism 153
 
-3.Which of the following will not cause a ClassCastException to be thrown?
+5.Which of the following will not cause a ClassCastException to be thrown?
 
 (A) ((SavingsAccount) b).addInterest();
 
