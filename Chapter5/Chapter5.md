@@ -461,6 +461,7 @@ public class SavingsAccount extends BankAccount {
 小练习
 -----
 **Answering question 1 requires you to read the following code:**
+
 ```java
 public class BankAccount {
     private double balance;
@@ -494,6 +495,7 @@ public class SavingsAccount extends BankAccount {
     }
 }
 ```
+
 1.Which of the following correctly implements the default constructor of the `SavingsAccount` class?
 
 I interestRate = 0;

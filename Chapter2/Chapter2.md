@@ -410,35 +410,7 @@ III.Student c = new Student("Juan", "15");
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>C</cr>
 
-4.Consider the following method.
 
-```java
-public String mystery(String input)
-{
-  String output = "";
-
-  for (int k = 1; k < input.length(); k = k + 2)
-  {
-    output += input.substring(k, k + 1);
-  }
-
-  return output;
-}
-```
-
-What is returned as a result of the call mystery ("computer") ?
-
-(A) "computer"
-
-(B) "cmue"
-
-(C) "optr"
-
-(D) "ompute"
-
-(E) Nothing is returned because an IndexOutOfBoundsException is thrown.
-
-<cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
 
 ### 实验室
 
