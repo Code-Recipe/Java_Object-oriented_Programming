@@ -344,7 +344,9 @@ What is printed as a result of the call whatsltDo ("WATCH") ?
 
 (B) WATC
 
-(C) ATCH
+(C) 
+
+  ATCH
 
   ATC
 
@@ -352,7 +354,9 @@ What is printed as a result of the call whatsltDo ("WATCH") ?
 
   A
 
-(D) WATC
+(D) 
+
+  WATC
 
   WAT
 
@@ -360,7 +364,9 @@ What is printed as a result of the call whatsltDo ("WATCH") ?
 
   W
 
-(E) WATCH
+(E) 
+
+  WATCH
 
   WATC 
 
