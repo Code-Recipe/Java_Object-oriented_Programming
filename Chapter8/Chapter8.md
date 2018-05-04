@@ -340,12 +340,13 @@ if (len > 1)
 
 What is printed as a result of the call whatsltDo ("WATCH") ?
 
-(A) H
+(A) ```H```
 
-(B) WATC
+(B) ```WATC```
 
 (C) 
 
+```
   ATCH
 
   ATC
@@ -353,9 +354,11 @@ What is printed as a result of the call whatsltDo ("WATCH") ?
   AT
 
   A
+```
 
 (D) 
 
+```
   WATC
 
   WAT
@@ -363,9 +366,11 @@ What is printed as a result of the call whatsltDo ("WATCH") ?
   WA
 
   W
+```
 
 (E) 
 
+```
   WATCH
 
   WATC 
@@ -373,6 +378,7 @@ What is printed as a result of the call whatsltDo ("WATCH") ?
   WAT
      
   WA
+```
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
 
