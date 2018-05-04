@@ -346,28 +346,27 @@ What is printed as a result of the call whatsltDo ("WATCH") ?
 
 (C) ATCH
 
-    ATC
+  ATC
 
-    AT
+  AT
 
-    A
+  A
 
 (D) WATC
 
-    WAT
+  WAT
 
-    WA
+  WA
 
-    W
+  W
 
 (E) WATCH
 
-    WATC 
+  WATC 
 
-    WAT
+  WAT
      
-    WA
-
+  WA
 
 <cr type="hidden"><notice>隐藏内容功能在此无法正常显示，请移步至[程谱 coderecipe.cn](https://coderecipe.cn/learn/3)查看。</notice>D</cr>
 
