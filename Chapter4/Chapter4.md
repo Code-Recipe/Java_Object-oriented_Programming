@@ -48,28 +48,28 @@ class Dog extends Mammal{
 ```Java
 // 动物
 class Animal {
-   int eyes;
-   public void run(){
-      System.out.println("I can run.")
+    int eyes;
+    public void run(){
+        System.out.println("I can run.");
     }
 }
 
 // 哺乳动物
-class Mammal{
+class Mammal extends Animal{
 
 }
 
 //狗
 public class Dog extends Mammal{
-  public void info(){
-    System.out.println("I have " + eyes + "eyes.")
-  }
+    public void info(){
+        System.out.println("I have " + eyes + "eyes.");
+    }
 
-  public static void main(String[] args){
-    Dog myDog = new Dog();
-    myDog.eyes = 2;
-    myDog.run();
-  }
+    public static void main(String[] args){
+        Dog myDog = new Dog();
+        myDog.eyes = 2;
+        myDog.run();
+    }
 }
 
 // 爬行动物
@@ -154,7 +154,7 @@ public class MountainBike extends Bicycle {
 
 instanceof关键字
 -----
-我们可以通过instanceof关键字判断父类与子类是否存在继承的关系。instanceof 是 Java 的保留关键字，它的作用是测试它左边的对象是否是它右边的类的实例，或左边的类是否由继承自右边的类。用来判断哺乳动物是否是动物，狗是否是动物等，如果是那么就是真，否则就是假，instanceof关键字返回 boolean 的数据类型。
+我们可以通过instanceof关键字判断父类与子类是否存在继承的关系。instanceof 是 Java 的保留关键字，它的作用是测试它左边的对象是否是它右边的类的实例，或左边的对象的类是否继承自右边的类。用来判断哺乳动物是否是动物，狗是否是动物等，如果是那么就是真，否则就是假，instanceof关键字返回 boolean 的数据类型。
 
 
 例如：
@@ -166,7 +166,7 @@ public class Vehicle {
 
 public class Bicycle extends Vehicle{
     public static void main(String[] args) {
-        system.out.println(Bicycle instanceof      Vehicle); // 输出结果为：ture  
+        system.out.println(new Bicycle() instanceof Vehicle); // 输出结果为：ture  
 
     }  
 }
