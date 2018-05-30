@@ -48,28 +48,28 @@ class Dog extends Mammal{
 ```Java
 // 动物
 class Animal {
-   int eyes;
-   public void run(){
-      System.out.println("I can run.")
+    int eyes;
+    public void run(){
+        System.out.println("I can run.");
     }
 }
 
 // 哺乳动物
-class Mammal{
+class Mammal extends Animal{
 
 }
 
 //狗
 public class Dog extends Mammal{
-  public void info(){
-    System.out.println("I have " + eyes + "eyes.")
-  }
+    public void info(){
+        System.out.println("I have " + eyes + "eyes.");
+    }
 
-  public static void main(String[] args){
-    Dog myDog = new Dog();
-    myDog.eyes = 2;
-    myDog.run();
-  }
+    public static void main(String[] args){
+        Dog myDog = new Dog();
+        myDog.eyes = 2;
+        myDog.run();
+    }
 }
 
 // 爬行动物
