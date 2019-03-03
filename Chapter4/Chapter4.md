@@ -352,13 +352,13 @@ public abstract class Animal{
 
 public abstract class Canine extends Animal{
     public void eat(){
-        System.out.println("Canine animal is eating!")
+        System.out.println("Canine animal is eating!");
     }
 }
 
 public class Dog extends Canine{
     public void roam(){
-        System.out.println("Dog is running!")
+        System.out.println("Dog is running!");
     }
     public static void main(String[] args){
         Dog dog = new Dog();

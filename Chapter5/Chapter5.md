@@ -458,6 +458,39 @@ public class SavingsAccount extends BankAccount {
 }
 ```
 
+考试技巧
+-----
+ClassCastException出现情况&Downcasting类型转化可以发生的情况。
+```java
+class a{
+}
+class b extends a{
+}
+class c extends b{
+}
+class e extends b{
+}
+class d extends c{
+}
+
+a x =new d()
+//(b)x,(c)x,(d)x 都可以
+//(e)x 会出现ClassCastException错误 
+b x = new c()
+// (d)x, (a)x 会出现ClassCastException错误
+a x = new e()
+//(b)x,(e)x 都可以
+//其他如(d)x会出现ClassCastException错误 
+```
+
+也就是说在转换类型的时候, 继承关系是 a <- b <- c <- d & b <- e
+![继承关系](3.png)
+(下面的O,P,I 都代表一个不同的类名)
+
+那么 在使用 `O x = new P();` (O,P 是a到d那一条继承关系链中的一种(e不能包括,因为d没有继承e) 且 O>=P)
+
+downcasting向下转换 `(I) x;` 只有在 P <= I <= O 时不会出错，反之会抛出 ClassCastException 错误。
+
 小练习
 -----
 **Answering question 1 requires you to read the following code:**
